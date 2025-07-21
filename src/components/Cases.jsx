@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const Cases = () => {
   return (
-    <div className='w-full h-screen bg-white flex flex-col justify-center px-8'>
+    <div className='w-full mt-12 h-screen bg-white flex flex-col justify-center px-8'>
       <div className='w-full h-[50vh] grid grid-cols-2 gap-4'>
         <div className='bg-gray-400 rounded-[45px] w-full h-full overflow-hidden'>
           <Image className="w-full h-full object-cover" src={casesImageOne} alt="casesImageOne" />
@@ -14,12 +14,7 @@ export const Cases = () => {
         <div className='bg-gray-400 rounded-[45px] w-full h-full overflow-hidden'>
           <Image className="w-full h-full object-cover" src={casesImageTwo} alt="casesImageTwo" />
         </div>
-        <div className='bg-gray-400 rounded-[45px] w-full h-full overflow-hidden'>
-          <Image className="w-full h-full object-cover" src={casesImageTree} alt="casesImageTree" />
-        </div>
-        <div className='bg-gray-400 rounded-[45px] w-full h-full overflow-hidden'>
-          <Image className="w-full h-full object-cover" src={casesImageFour} alt="casesImageFour" />
-        </div>
+        
       </div>
 
       <div className='w-full  flex flex-col justify-center gap-y-8 mt-12'>
