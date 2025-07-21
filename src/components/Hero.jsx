@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <>
-      <section id="home" className='w-full bg-white h-dvh  overflow-hidden flex justify-center px-8 -z-10'>
+      <section id="home" className='w-full bg-white h-screen  overflow-hidden flex justify-center px-8 -z-10'>
       
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8  max-w-[80vw]">
         

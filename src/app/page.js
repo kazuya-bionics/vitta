@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-[440dvh]">
+    <div className="w-full h-[440vh]">
       <Hero/>
       <About/>
       <Cases/>

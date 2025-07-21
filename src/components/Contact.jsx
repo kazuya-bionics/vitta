@@ -8,7 +8,7 @@ import {
 
 export const Contact = () => {
   return (
-    <div className='w-full px-8 h-[40dvh] sticky bottom-0 z-[-1] bg-[#FFBF48] text-[10px] md:text-md'>
+    <div className='w-full px-8 h-[40vh] sticky bottom-0 z-[-1] bg-[#FFBF48] text-[10px] md:text-md'>
       <div className='flex flex-col absolute top-10 gap-4'>
         <h3 className='text-sm font-bold'>Contact</h3>
         <div>

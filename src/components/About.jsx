@@ -54,7 +54,7 @@ export const About = () => {
 
   return (
     <section ref={container} id="about" className="w-full bg-[#121212] text-white">
-      <div className="w-full h-dvh grid gap-4 place-content-center relative px-8">
+      <div className="w-full h-screen grid gap-4 place-content-center relative px-8">
         <span className="text-5xl z-10 font-bold opacity-50">01 QUIENES SOMOS</span>
         <p className="z-10">
           En SEGUROS VITTA, creemos que proteger la vida es uno de los actos más humanos y valientes que existen. Somos una agencia especializada en seguros de vida con la misión de ayudarte a cuidar lo más valioso: las personas que amas.
@@ -67,7 +67,7 @@ export const About = () => {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="w-full h-dvh grid gap-4 place-content-center relative px-8">
+      <div className="w-full h-screen grid gap-4 place-content-center relative px-8">
         <span className="text-5xl z-10 font-bold opacity-50">02</span>
         <p className="z-10">
           Contamos con un equipo de asesores comprometidos, con amplia experiencia en el sector y una profunda vocación de servicio. No solo vendemos pólizas: ofrecemos tranquilidad, respaldo y soluciones reales pensadas para cada etapa de tu vida. Nos enorgullece trabajar con transparencia, empatía y profesionalismo, porque sabemos que tomar una decisión sobre el futuro no es fácil. Te acompañamos con claridad, sin presión y con la única intención de que tomes la mejor decisión para ti y tu familia.
