@@ -21,7 +21,7 @@ export const Contact = () => {
           <p>720 527 4302</p>
         </div>
       </div>
-      <div className='absolute right-0 top-0 w-[50dvw] h-[40dvh] flex justify-center gap-x-6 md:gap-x-20 items-center text-white text-xl md:text-4xl bg-[#161616]'>
+      <div className='absolute right-0 top-0 w-[50dvw] h-[40vh] flex justify-center gap-x-6 md:gap-x-20 items-center text-white text-xl md:text-4xl bg-[#161616]'>
         <div>
           <FaInstagram />
         </div>

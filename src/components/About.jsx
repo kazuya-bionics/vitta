@@ -60,7 +60,7 @@ export const About = () => {
           En SEGUROS VITTA, creemos que proteger la vida es uno de los actos más humanos y valientes que existen. Somos una agencia especializada en seguros de vida con la misión de ayudarte a cuidar lo más valioso: las personas que amas.
         </p>
         <Image 
-          className="w-[30vw] h-[300px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+          className="w-[30vw] h-[180px] md:h-[300px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
           src={heroImageLife}
           alt="Imagen vida"
         />
@@ -70,10 +70,10 @@ export const About = () => {
       <div className="w-full h-screen grid gap-4 place-content-center relative px-8">
         <span className="text-5xl z-10 font-bold opacity-50">02</span>
         <p className="z-10">
-          Contamos con un equipo de asesores comprometidos, con amplia experiencia en el sector y una profunda vocación de servicio. No solo vendemos pólizas: ofrecemos tranquilidad, respaldo y soluciones reales pensadas para cada etapa de tu vida. Nos enorgullece trabajar con transparencia, empatía y profesionalismo, porque sabemos que tomar una decisión sobre el futuro no es fácil. Te acompañamos con claridad, sin presión y con la única intención de que tomes la mejor decisión para ti y tu familia.
+          Contamos con un equipo de asesores comprometidos, con amplia experiencia en el sector y una profunda vocación de servicio. No solo vendemos pólizas: ofrecemos tranquilidad, respaldo y soluciones reales pensadas para cada etapa de tu vida. <span className="hidden md:block">Nos enorgullece trabajar con transparencia, empatía y profesionalismo, porque sabemos que tomar una decisión sobre el futuro no es fácil. Te acompañamos con claridad, sin presión y con la única intención de que tomes la mejor decisión para ti y tu familia.</span>
         </p>
         <Image
-          className="w-[30vw] h-[300px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+          className="w-[30vw] h-[180px] md:h-[300px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
           src={heroImageCar}
           alt="Imagen auto"
         />
