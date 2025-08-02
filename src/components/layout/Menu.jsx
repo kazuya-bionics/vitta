@@ -63,15 +63,15 @@ export const Menu = ({ isOpen }) => {
       className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-rose-500/75 backdrop-blur-lg fixed z-30 top-0 left-0"
     >
       <ul className="flex flex-col gap-y-8 text-6xl font-bold">
-        {["Cases", "About", "Services"].map((item, index) => (
+        {["Casos", "Nosotros", "Servicios"].map((item, index) => (
           <li
             key={index}
             onMouseEnter={onHoverLink}
             onMouseLeave={onUnhoverLink}
             className="py-1 overflow-hidden h-16 relative flex flex-col"
           >
-            <Link className="text-link" href={`#${item.toLowerCase()}`}>{item}</Link>
-            <Link className="text-link" href={`#${item.toLowerCase()}`}>{item}</Link>
+            <Link className="text-link" href={`/${item.toLowerCase()}`}>{item}</Link>
+            <Link className="text-link" href={`/${item.toLowerCase()}`}>{item}</Link>
             <div className="w-[5px] h-[2px] bg-black absolute left-0 top-[-50%] translate-y-[-50%]" />
           </li>
         ))}

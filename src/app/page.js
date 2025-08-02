@@ -51,7 +51,7 @@ export default function Home() {
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
 
-      <Loader/>
+      {/* <Loader/> */}
 
       <About />
       <Contact/>
@@ -64,7 +64,7 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-screen bg-[#FFEAEA] sticky top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-screen bg-[#EFEEEA] sticky top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
         <div>
@@ -83,7 +83,7 @@ const Hero = ({ heroTrigger }) => {
           <p>para después y empieza hoy a cuidar tu futuro.</p>
         </div>
         <div className="flex text-[10px] md:text-[14px] gap-x-8 mb-12">
-          <button className="p-2 bg-black text-white border-2 border-black rounded-[45px]">
+          <button className="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px]">
             No soy servidor público
           </button>
           <button className="p-2 border-2 border-black rounded-[45px]">
