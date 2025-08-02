@@ -88,7 +88,7 @@ const Hero = ({ heroTrigger }) => {
           <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px]" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
-          <Button styles="p-2 border-2 border-black rounded-[45px]">
+          <Button styles="p-2 border-2 border-black rounded-[45px]" soyPublico={""}>
             Habla con un asesor
           </Button>
         </div>
