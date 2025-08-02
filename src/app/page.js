@@ -34,6 +34,8 @@ export default function Home() {
     tl.to(heroTrigger.current, {
       scale: 0.9,
       rotate: "1deg",
+      filter: "blur(5px)",
+      duration: 1
     })
 
     tl.from(
