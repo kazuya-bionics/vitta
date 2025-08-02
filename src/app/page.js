@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 import { About } from "@/components/home/About"
 import { Loader } from "@/components/home/Loader"
+ 
+import {Button} from "../components/home/Button"
 
 import bgHeroSection from "../../public/assets/images/bgHeroSection.jpg"
 import { Contact } from "@/components/home/Contact"
@@ -83,12 +85,12 @@ const Hero = ({ heroTrigger }) => {
           <p>para después y empieza hoy a cuidar tu futuro.</p>
         </div>
         <div className="flex text-[10px] md:text-[14px] gap-x-8 mb-12">
-          <button className="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px]">
+          <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px]" soyPublico={"no soy servidor publico"}>
             No soy servidor público
-          </button>
-          <button className="p-2 border-2 border-black rounded-[45px]">
+          </Button>
+          <Button styles="p-2 border-2 border-black rounded-[45px]">
             Habla con un asesor
-          </button>
+          </Button>
         </div>
       </div>
     </section>

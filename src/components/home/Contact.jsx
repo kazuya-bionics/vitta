@@ -1,13 +1,23 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 
 export const Contact = () => {
+
+  const [formData, setFormData] = useState(null)
+
+  const handleForm = (e) => {
+    e.preventDefault();
+    
+  };
+
   return (
     <div className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-6 lg:px-8">
       <h4 className="text-3xl font-semibold text-slate-800 text-center mb-12">
         ¡Recibe atención personalizada!
       </h4>
 
-      <form className="w-full max-w-md space-y-4">
+      <form onSubmit={handleForm} className="w-full max-w-md space-y-4">
         {/* Nombre */}
         <div>
           <label htmlFor="nombre" className="block text-sm text-slate-600 mb-1">
