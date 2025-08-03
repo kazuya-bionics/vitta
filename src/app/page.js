@@ -13,6 +13,7 @@ import {Button} from "../components/home/Button"
 
 import bgHeroSection from "../../public/assets/images/bgHeroSection.jpg"
 import { Contact } from "@/components/home/Contact"
+import { MouseEffects } from "@/components/home/MouseEffects"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -49,7 +50,9 @@ export default function Home() {
   }, { dependencies: [], refs: [containerHero, heroTrigger, heroAnotherTrigger] })
 
   return (
+    <>
     <main>
+    <MouseEffects/>
       <div ref={containerHero} className="relative h-[200vh] bg-black">
         <Hero heroTrigger={heroTrigger} />
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
@@ -60,6 +63,7 @@ export default function Home() {
       <About />
       <Contact/>
     </main>
+    </>
   )
 }
 
@@ -68,29 +72,29 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-screen bg-[#EFEEEA] sticky top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-screen bg-white sticky top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div>
-          <h3 className="text-5xl md:text-5xl hero-title">
+        <div  className="text-4xl md:text-6xl font-bold">
+          <h3>
             ¿No te responde tu asesor?
           </h3>
-          <h3 className="text-5xl md:text-5xl hero-title">
+          <h3>
             Nosotros te respaldamos
           </h3>
         </div>
-        <div className="text-[10px] md:text-[14px] opacity-50">
+        <div className="text-[12px] md:text-[16px] opacity-50">
           <p>
             Adquiere una asesoría gratuita en seguro de vida, auto y gastos
             médicos. No lo dejes
           </p>
           <p>para después y empieza hoy a cuidar tu futuro.</p>
         </div>
-        <div className="flex text-[10px] md:text-[14px] gap-x-8 mb-12">
-          <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px]" soyPublico={"no soy servidor publico"}>
+        <div className="flex text-[12px] md:text-[16px] gap-x-8 mb-12">
+          <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
-          <Button styles="p-2 border-2 border-black rounded-[45px]" soyPublico={""}>
+          <Button styles="p-2 border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={""}>
             Habla con un asesor
           </Button>
         </div>

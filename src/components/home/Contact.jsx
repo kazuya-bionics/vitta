@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
+
 export const Contact = () => {
 
   const [formData, setFormData] = useState(null)
@@ -12,12 +14,32 @@ export const Contact = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-6 lg:px-8">
-      <h4 className="text-3xl font-semibold text-slate-800 text-center mb-12">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-8 lg:px-8">
+      <h4 className="text-3xl font-semibold text-slate-800 text-center mb-8 md:mb-12">
         ¡Recibe atención personalizada!
       </h4>
-
-      <form onSubmit={handleForm} className="w-full max-w-md space-y-4">
+    <div className='w-full flex flex-col md:flex-row items-center'>
+      <div className='w-full pb-8 flex gap-x-12 justify-evenly md:justify-normal items-center gap-y-4'>
+        <div className='flex flex-col gap-y-4'>
+          <div className='flex flex-col gap-y-1'>
+            <h3 className='text-xl font-bold'>Correo</h3>
+            <h3>vittaseguro@gmail.com</h3>
+          </div>
+          <div className='flex flex-col gap-y-1'>
+            <h3 className='text-xl font-bold'>Telefono</h3>
+            <h3>+52 7205274302</h3>
+          </div>
+        </div>
+        <div className='flex flex-col gap-y-3'>
+          <h3 className='text-xl font-bold'>Redes sociales</h3>
+          <ul className='flex gap-x-3 text-2xl'>
+            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaFacebook/></li>
+            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaInstagram/></li>
+            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaTiktok/></li>
+          </ul>
+        </div>
+      </div>
+      <form onSubmit={handleForm} className="w-full [box-shadow:0_0_8px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0_0_20px_5px_rgba(0,0,0,0.1)] space-y-4 p-4 rounded-md">
         {/* Nombre */}
         <div>
           <label htmlFor="nombre" className="block text-sm text-slate-600 mb-1">
@@ -85,19 +107,20 @@ export const Contact = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </span>
-            <span className="ml-3 text-sm text-slate-600">No soy servidor público</span>
-          </label>
-        </div>
+              </span>
+              <span className="ml-3 text-sm text-slate-600">No soy servidor público</span>
+            </label>
+          </div>
 
         {/* Botón */}
-        <button
-          type="submit"
-          className="w-full mt-2 bg-slate-800 text-white text-sm py-2 px-4 rounded-md border border-transparent shadow-md hover:bg-slate-700 hover:shadow-lg transition disabled:opacity-50 disabled:pointer-events-none"
-        >
-          ¡Todo Listo!
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="w-full mt-2 bg-slate-800 text-white text-sm py-2 px-4 rounded-md border border-transparent shadow-md hover:bg-slate-700 hover:shadow-lg transition disabled:opacity-50 disabled:pointer-events-none"
+          >
+            ¡Todo Listo!
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
