@@ -19,7 +19,7 @@ export const Contact = () => {
         ¡Recibe atención personalizada!
       </h4>
     <div className='w-full flex flex-col md:flex-row items-center'>
-      <div className='w-full pb-8 flex gap-x-12 justify-evenly md:justify-normal items-center gap-y-4'>
+      <div className='w-full pb-8 flex gap-x-2 md:gap-x-8 md:justify-normal items-center gap-y-4'>
         <div className='flex flex-col gap-y-4'>
           <div className='flex flex-col gap-y-1'>
             <h3 className='text-xl font-bold'>Correo</h3>
@@ -32,7 +32,7 @@ export const Contact = () => {
         </div>
         <div className='flex flex-col gap-y-3'>
           <h3 className='text-xl font-bold'>Redes sociales</h3>
-          <ul className='flex gap-x-1 text-xl'>
+          <ul className='flex gap-x-2 text-xl'>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaFacebook/></li>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaInstagram/></li>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaTiktok/></li>
