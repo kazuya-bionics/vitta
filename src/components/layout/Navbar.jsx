@@ -30,7 +30,7 @@ export const Navbar = () => {
         <button onClick={openMenu} className='md:hidden text-lg'>
           <FaAlignCenter />
         </button>
-        <Link href="/contact" className="border-2 border-black px-2 rounded-[45px]">Contact</Link>
+        <Link href="/#contact" className="border-2 border-black px-2 rounded-[45px]">Contact</Link>
       </div>
 
       <Menu isOpen={isOpen} />

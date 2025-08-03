@@ -1,127 +1,217 @@
 "use client"
+import { useActionState } from "react"
+import { Facebook, Instagram, Music } from "lucide-react"
+import { submitContactForm } from "@/app/actions"
 
-import React, { useState } from 'react';
-
-import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
+const initialState = {
+  message: "",
+}
 
 export const Contact = () => {
-
-  const [formData, setFormData] = useState(null)
-
-  const handleForm = (e) => {
-    e.preventDefault();
-    
-  };
+  const [state, formAction, pending] = useActionState(submitContactForm, initialState)
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-8 lg:px-8">
+    <div
+      id="contact"
+      className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-8 lg:px-8"
+    >
       <h4 className="text-3xl font-semibold text-slate-800 text-center mb-8 md:mb-12">
         ¡Recibe atención personalizada!
       </h4>
-    <div className='w-full flex flex-col md:flex-row items-center'>
-      <div className='w-full pb-8 flex gap-x-2 md:gap-x-8 md:justify-normal items-center gap-y-4'>
-        <div className='flex flex-col gap-y-4'>
-          <div className='flex flex-col gap-y-1'>
-            <h3 className='text-xl font-bold'>Correo</h3>
-            <h3>vittaseguro@gmail.com</h3>
-          </div>
-          <div className='flex flex-col gap-y-1'>
-            <h3 className='text-xl font-bold'>Telefono</h3>
-            <h3>+52 7205274302</h3>
-          </div>
-        </div>
-        <div className='flex flex-col gap-y-3'>
-          <h3 className='text-xl font-bold'>Redes sociales</h3>
-          <ul className='flex gap-x-2 text-xl'>
-            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaFacebook/></li>
-            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaInstagram/></li>
-            <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaTiktok/></li>
-          </ul>
-        </div>
-      </div>
-      <form onSubmit={handleForm} className="w-full [box-shadow:0_0_8px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0_0_20px_5px_rgba(0,0,0,0.1)] space-y-4 p-4 rounded-md">
-        {/* Nombre */}
-        <div>
-          <label htmlFor="nombre" className="block text-sm text-slate-600 mb-1">
-            Nombre
-          </label>
-          <input
-            id="nombre"
-            type="text"
-            placeholder="Nombre"
-            className="w-full bg-transparent border border-slate-200 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-400 transition shadow-sm"
-          />
-        </div>
 
-        {/* Email */}
-        <div>
-          <label htmlFor="email" className="block text-sm text-slate-600 mb-1">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            className="w-full bg-transparent border border-slate-200 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-400 transition shadow-sm"
-          />
-        </div>
+      <div className="w-full flex flex-col md:flex-row items-start gap-8">
+        {/* Información de contacto */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xl font-bold text-slate-800">Correo</h3>
+              <a href="mailto:vittaseguro@gmail.com" className="text-slate-600 hover:text-slate-800 transition-colors">
+                vittaseguro@gmail.com
+              </a>
+            </div>
 
-        {/* Celular */}
-        <div>
-          <label htmlFor="celular" className="block text-sm text-slate-600 mb-1">
-            Celular
-          </label>
-          <input
-            id="celular"
-            type="tel"
-            placeholder="Celular"
-            className="w-full bg-transparent border border-slate-200 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-400 transition shadow-sm"
-          />
-        </div>
-
-        {/* Edad */}
-        <div>
-          <label htmlFor="edad" className="block text-sm text-slate-600 mb-1">
-            Edad
-          </label>
-          <input
-            id="edad"
-            type="date"
-            className="w-full bg-transparent border border-slate-200 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-slate-400 transition shadow-sm"
-          />
-        </div>
-
-        {/* Checkbox */}
-        <div className="flex items-center">
-          <label htmlFor="check-publico" className="flex items-center cursor-pointer">
-            <input
-              id="check-publico"
-              type="checkbox"
-              className="h-5 w-5 rounded border border-slate-300 checked:bg-slate-800 checked:border-slate-800 appearance-none transition peer"
-            />
-            <span className="absolute text-white opacity-0 pointer-events-none peer-checked:opacity-100 transform -translate-x-1/2 -translate-y-1/2 left-[1.15rem] top-1/2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              </span>
-              <span className="ml-3 text-sm text-slate-600">No soy servidor público</span>
-            </label>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xl font-bold text-slate-800">Teléfono</h3>
+              <a href="tel:+527205274302" className="text-slate-600 hover:text-slate-800 transition-colors">
+                +52 720 527 4302
+              </a>
+            </div>
           </div>
 
-        {/* Botón */}
-          <button
-            type="submit"
-            className="w-full mt-2 bg-slate-800 text-white text-sm py-2 px-4 rounded-md border border-transparent shadow-md hover:bg-slate-700 hover:shadow-lg transition disabled:opacity-50 disabled:pointer-events-none"
+          <div className="flex flex-col gap-3">
+            <h3 className="text-xl font-bold text-slate-800">Redes sociales</h3>
+            <ul className="flex gap-3">
+              <li>
+                <a
+                  href="#"
+                  className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
+                  aria-label="TikTok"
+                >
+                  <Music size={20} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Formulario */}
+        <div className="w-full md:w-1/2">
+          <form
+            action={formAction}
+            className="w-full shadow-lg md:shadow-xl space-y-4 p-6 rounded-lg bg-white border border-slate-100"
           >
-            ¡Todo Listo!
-          </button>
-        </form>
+            {/* Mensaje de estado */}
+            {state?.message && (
+              <div
+                className={`p-3 rounded-md text-sm ${
+                  state.success
+                    ? "bg-green-50 text-green-700 border border-green-200"
+                    : "bg-red-50 text-red-700 border border-red-200"
+                }`}
+                role="alert"
+                aria-live="polite"
+              >
+                {state.message}
+              </div>
+            )}
+
+            {/* Nombre */}
+            <div>
+              <label htmlFor="nombre" className="block text-sm font-medium text-slate-700 mb-2">
+                Nombre *
+              </label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                placeholder="Tu nombre completo"
+                required
+                disabled={pending}
+                className="w-full bg-white border border-slate-300 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-describedby={state?.errors?.nombre ? "nombre-error" : undefined}
+              />
+              {state?.errors?.nombre && (
+                <p id="nombre-error" className="mt-1 text-sm text-red-600" role="alert">
+                  {state.errors.nombre[0]}
+                </p>
+              )}
+            </div>
+
+            {/* Email */}
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                Email *
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="tu@email.com"
+                required
+                disabled={pending}
+                className="w-full bg-white border border-slate-300 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-describedby={state?.errors?.email ? "email-error" : undefined}
+              />
+              {state?.errors?.email && (
+                <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
+                  {state.errors.email[0]}
+                </p>
+              )}
+            </div>
+
+            {/* Celular */}
+            <div>
+              <label htmlFor="celular" className="block text-sm font-medium text-slate-700 mb-2">
+                Celular *
+              </label>
+              <input
+                id="celular"
+                name="celular"
+                type="tel"
+                placeholder="720 527 4302"
+                required
+                disabled={pending}
+                className="w-full bg-white border border-slate-300 rounded-md px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-describedby={state?.errors?.celular ? "celular-error" : undefined}
+              />
+              {state?.errors?.celular && (
+                <p id="celular-error" className="mt-1 text-sm text-red-600" role="alert">
+                  {state.errors.celular[0]}
+                </p>
+              )}
+            </div>
+
+            {/* Fecha de nacimiento */}
+            <div>
+              <label htmlFor="edad" className="block text-sm font-medium text-slate-700 mb-2">
+                Fecha de nacimiento *
+              </label>
+              <input
+                id="edad"
+                name="edad"
+                type="date"
+                required
+                disabled={pending}
+                className="w-full bg-white border border-slate-300 rounded-md px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-describedby={state?.errors?.edad ? "edad-error" : undefined}
+              />
+              {state?.errors?.edad && (
+                <p id="edad-error" className="mt-1 text-sm text-red-600" role="alert">
+                  {state.errors.edad[0]}
+                </p>
+              )}
+            </div>
+
+            {/* Checkbox */}
+            <div className="flex items-start gap-3">
+              <input
+                id="noServidorPublico"
+                name="noServidorPublico"
+                type="checkbox"
+                disabled={pending}
+                className="mt-1 h-4 w-4 rounded border-slate-300 text-orange-600 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              />
+              <label htmlFor="noServidorPublico" className="text-sm text-slate-600 cursor-pointer">
+                Confirmo que no soy servidor público
+              </label>
+            </div>
+
+            {/* Botón */}
+            <button
+              type="submit"
+              disabled={pending}
+              className="w-full mt-6 bg-slate-800 text-white text-sm font-medium py-3 px-4 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              {pending ? (
+                <>
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                  Enviando...
+                </>
+              ) : (
+                "¡Todo Listo!"
+              )}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  );
-};
-
+  )
+}

@@ -75,7 +75,7 @@ const Hero = ({ heroTrigger }) => {
       className="h-screen bg-white sticky top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div  className="text-4xl md:text-6xl font-bold">
+        <div  className="text-5xl md:text-6xl font-bold">
           <h3>
             ¿No te responde tu asesor?
           </h3>
