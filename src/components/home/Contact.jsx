@@ -32,7 +32,7 @@ export const Contact = () => {
         </div>
         <div className='flex flex-col gap-y-3'>
           <h3 className='text-xl font-bold'>Redes sociales</h3>
-          <ul className='flex gap-x-3 text-2xl'>
+          <ul className='flex gap-x-1 text-xl'>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaFacebook/></li>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaInstagram/></li>
             <li className='p-2 hover:scale-105 hover:text-gray-800 bg-orange-400 rounded-full'><FaTiktok/></li>
