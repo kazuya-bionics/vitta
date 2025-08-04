@@ -1,6 +1,7 @@
 "use client"
 
 import casesImageTwo from "../../../public/assets/images/casesImageTwo.jpg"
+import heroImageLife from "../../../public/assets/images/heroImageLife.jpg"
 import Image from "next/image"
 
 import { FaHandshake, FaUsers, FaRegLightbulb, FaRocket, FaShield, FaHeart } from "react-icons/fa6"
@@ -13,11 +14,11 @@ const Nosotros = () => {
   title: "Nosotros",
   subtitle: "Conoce quiénes somos y qué nos impulsa a crear soluciones excepcionales para tu negocio.",
   description: [
-    "Somos una empresa líder en desarrollo de soluciones digitales, comprometida con la innovación y la excelencia. Con más de 10 años de experiencia en el mercado, hemos ayudado a cientos de empresas a transformar sus procesos y alcanzar sus objetivos comerciales.",
-    "Nuestro equipo multidisciplinario combina creatividad, tecnología y estrategia para entregar resultados que superan las expectativas. Creemos en la importancia de construir relaciones duraderas basadas en la confianza y el compromiso mutuo.",
-    "Cada proyecto es una oportunidad para demostrar nuestra pasión por la tecnología y nuestro compromiso con la calidad. Trabajamos de la mano con nuestros clientes para entender sus necesidades y crear soluciones personalizadas que generen valor real.",
+    "Somos una empresa líder en soluciones de protección y asesoría en seguros, comprometida con la confianza, la transparencia y la excelencia en el servicio. Con más de 10 años de experiencia, hemos acompañado a cientos de clientes a proteger lo que más valoran y a tomar decisiones financieras inteligentes.",
+    "Nuestro equipo de expertos combina conocimiento, experiencia y cercanía para ofrecer coberturas y estrategias que realmente se adaptan a cada necesidad. Creemos en la importancia de construir relaciones duraderas, basadas en la tranquilidad y el respaldo mutuo.",
+    "Cada cliente es una oportunidad para demostrar nuestra vocación de servicio y nuestro compromiso con su bienestar. Trabajamos de la mano contigo para entender tus prioridades y diseñar soluciones de seguros que generen seguridad y valor real en tu vida.",
   ],
-  image: "/placeholder.svg?height=600&width=500&text=Team+Photo",
+  image: heroImageLife,
   values: [
     {
       icon: FaHandshake,
@@ -47,7 +48,7 @@ const Nosotros = () => {
     {
       icon: FaHeart,
       title: "Pasión",
-      description: "Amamos lo que hacemos y se refleja en cada proyecto que entregamos.",
+      description: "Amamos lo que hacemos y se refleja en cada cliente realizado",
     },
   ],
 }
@@ -173,7 +174,7 @@ const Nosotros = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {companyData.values.map((value, index) => {
               const IconComponent = value.icon
               return (

@@ -1,5 +1,11 @@
-import casesImageFour from "../../../public/assets/images/casesImageFour.jpg"
+"use client"
+
 import Image from "next/image"
+
+import casesImageOne from "../../../public/assets/images/casesImageOne.jpg"
+import casesImageTwo from "../../../public/assets/images/casesImageTwo.jpg"
+import casesImageTree from "../../../public/assets/images/casesImageTree.jpg"
+import casesImageFour from "../../../public/assets/images/casesImageFour.jpg"
 
 import { ArrowRight } from "lucide-react"
 
@@ -8,46 +14,32 @@ const Casos = () => {
   const casesData = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Complete digital transformation for a retail company, increasing sales by 150%.",
-    image: "/placeholder.svg?height=300&width=400",
+    title: "Resolvemos problemas con aseguradoras",
+    description: "Olvídate del papeleo, retrasos y respuestas confusas: nosotros negociamos, tú ganas",
+    image: casesImageOne,
     link: "/cases/ecommerce-platform",
   },
   {
     id: 2,
-    title: "Financial Dashboard",
-    description: "Real-time analytics platform for investment management with advanced data visualization.",
-    image: "/placeholder.svg?height=300&width=400",
+    title: "Analisis Financiero",
+    description: "Descubre en qué se va tu dinero y cómo hacerlo rendir más, sin complicaciones.",
+    image: casesImageTwo,
     link: "/cases/financial-dashboard",
   },
   {
     id: 3,
-    title: "Healthcare App",
-    description: "Mobile application connecting patients with healthcare providers, serving 10k+ users.",
-    image: "/placeholder.svg?height=300&width=400",
+    title: "Consultoria en seguros",
+    description: "Te guiamos para que pagues lo justo y estés realmente protegido.",
+    image: casesImageTree,
     link: "/cases/healthcare-app",
   },
   {
     id: 4,
-    title: "Logistics System",
-    description: "Supply chain optimization platform reducing operational costs by 30%.",
-    image: "/placeholder.svg?height=300&width=400",
+    title: "Pago de dividendos e inversiones",
+    description: "Invertir bien es cobrar tranquilo: recibe tus dividendos a tiempo y sin enredos.",
+    image: casesImageFour,
     link: "/cases/logistics-system",
-  },
-  {
-    id: 5,
-    title: "EdTech Platform",
-    description: "Online learning management system with interactive features for 50k+ students.",
-    image: "/placeholder.svg?height=300&width=400",
-    link: "/cases/edtech-platform",
-  },
-  {
-    id: 6,
-    title: "Smart City IoT",
-    description: "IoT infrastructure management for smart city initiatives and urban planning.",
-    image: "/placeholder.svg?height=300&width=400",
-    link: "/cases/smart-city-iot",
-  },
+  }
 ]
 
   return (
@@ -75,15 +67,14 @@ const Casos = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">Our Cases</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">Nuestros Casos</h2>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Discover how we've helped businesses transform their digital presence and achieve remarkable results through
-            innovative solutions.
+            En vitta valoramos tu seguridad y queremos que conozcas la trayectoria que nos ha hecho poder acompañarte
           </p>
         </div>
 
         {/* Cases Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-10">
           {casesData.map((caseItem) => (
             <div
               key={caseItem.id}
@@ -121,17 +112,6 @@ const Casos = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Optional: View All Cases Button */}
-        <div className="text-center mt-16">
-          <a
-            href="/cases"
-            className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/25 hover:scale-105"
-          >
-            <span>View All Cases</span>
-            <ArrowRight className="w-5 h-5" />
-          </a>
         </div>
       </div>
     </section>
