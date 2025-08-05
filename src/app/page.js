@@ -111,7 +111,7 @@ const Hero = ({ heroTrigger }) => {
     >
       <Plane/>
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div ref={textPrincipalContainer} className="sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
+        <div ref={textPrincipalContainer} className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
           <h3>
             ¿No te responde tu <span className="text-orange-400">asesor?</span> 
           </h3>
