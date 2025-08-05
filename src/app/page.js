@@ -59,7 +59,7 @@ export default function Home() {
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
 
-      {/* <Loader/> */}
+      <Loader/>
 
       <About />
       <Contact/>
