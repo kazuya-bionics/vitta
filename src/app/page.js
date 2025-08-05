@@ -84,10 +84,12 @@ const Hero = ({ heroTrigger }) => {
 
     gsap.set(".text-principal-container h3",{
       opacity: 0,
+      yPercent: 100
     })
 
     t2.to(".text-principal-container h3", {
       opacity: 1,
+      yPercent: 0
     })
 
     t2.from(".simple-text", {
