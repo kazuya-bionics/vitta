@@ -40,7 +40,7 @@ export const Menu = ({ isOpen }) => {
       defaults: { ease: "power2.inOut", duration: .8 }
     })
       .to(container.current, {
-        height: "100vh",
+        height: "100lvh",
         pointerEvents: "auto"
       })
 
