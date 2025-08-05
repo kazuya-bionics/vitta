@@ -59,7 +59,7 @@ export default function Home() {
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
 
-      <Loader/>
+      {/* <Loader/> */}
 
       <About />
       <Contact/>
@@ -119,14 +119,12 @@ const Hero = ({ heroTrigger }) => {
             <span className="text-orange-400 md:border-b-2 border-black">Nosotros</span> te respaldamos
           </h3>
         </div>
-        <div className="simple-text text-[12px] md:text-[16px] opacity-50">
+        <div className="simple-text text-[14px] md:text-[16px] opacity-50 px-4">
           <p>
             Adquiere una asesoría gratuita en seguro de vida, auto y gastos
-            médicos. No lo dejes
-          </p>
-          <p>para después y empieza hoy a cuidar tu futuro.</p>
+            médicos. No lo dejes para después y empieza hoy a cuidar tu futuro.</p>
         </div>
-        <div className="animated-button flex text-[12px] md:text-[16px] gap-x-8 mb-12">
+        <div className="animated-button flex text-[14px] md:text-[16px] gap-x-8 mb-12">
           <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
