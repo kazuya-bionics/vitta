@@ -8,7 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 import { About } from "@/components/home/About"
 import { Loader } from "@/components/home/Loader"
- 
+
+import { Plane } from "@/components/home/Plane"
 import {Button} from "../components/home/Button"
 
 import bgHeroSection from "../../public/assets/images/bgHeroSection.jpg"
@@ -74,13 +75,14 @@ const Hero = ({ heroTrigger }) => {
       ref={heroTrigger}
       className="h-screen bg-white sticky top-0 overflow-hidden flex justify-center px-8 z-0"
     >
+      <Plane/>
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div  className="text-5xl md:text-6xl font-bold">
+        <div  className="text-5xl md:text-6xl font-bold uppercase">
           <h3>
-            ¿No te responde tu asesor?
+            ¿No te responde tu <span className="text-orange-400">asesor?</span> 
           </h3>
           <h3>
-            Nosotros te respaldamos
+            <span className="text-orange-400 md:border-b-2 border-black">Nosotros</span> te respaldamos
           </h3>
         </div>
         <div className="text-[12px] md:text-[16px] opacity-50">

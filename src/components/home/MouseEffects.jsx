@@ -36,7 +36,7 @@ export const MouseEffects = () => {
   return (
     <div
       ref={cursor}
-      className="w-8 h-8 bg-white mix-blend-difference fixed top-0 left-0 z-40 rounded-full pointer-events-none"
+      className="w-8 h-8 hidden md:flex bg-white mix-blend-difference fixed top-0 left-0 z-40 rounded-full pointer-events-none"
     />
   )
 }
