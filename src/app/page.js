@@ -59,7 +59,7 @@ export default function Home() {
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
 
-      {/* <Loader/> */}
+      <Loader/>
 
       <About />
       <Contact/>
@@ -70,6 +70,38 @@ export default function Home() {
 
 // Hero component
 const Hero = ({ heroTrigger }) => {
+
+  const textPrincipalContainer = useRef(null)
+
+  useGSAP(() => {
+    const t2 = gsap.timeline({
+      defaults: {
+        delay: 5.7,
+        ease: "power2.inOut",
+        duration: 1
+      }
+    })
+
+    gsap.set(".text-principal-container h3",{
+      opacity: 0,
+    })
+
+    t2.to(".text-principal-container h3", {
+      opacity: 1,
+    })
+
+    t2.from(".simple-text", {
+      opacity:0,
+      delay:-.3
+    })
+
+    t2.from(".animated-button", {
+      opacity:0,
+      delay:0
+    },"<")
+
+  }, [textPrincipalContainer, heroTrigger])
+
   return (
     <section
       ref={heroTrigger}
@@ -77,7 +109,7 @@ const Hero = ({ heroTrigger }) => {
     >
       <Plane/>
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div  className="text-5xl md:text-6xl font-bold uppercase">
+        <div ref={textPrincipalContainer} className="text-5xl md:text-6xl font-bold uppercase text-principal-container overflow-hidden">
           <h3>
             ¿No te responde tu <span className="text-orange-400">asesor?</span> 
           </h3>
@@ -85,14 +117,14 @@ const Hero = ({ heroTrigger }) => {
             <span className="text-orange-400 md:border-b-2 border-black">Nosotros</span> te respaldamos
           </h3>
         </div>
-        <div className="text-[12px] md:text-[16px] opacity-50">
+        <div className="simple-text text-[12px] md:text-[16px] opacity-50">
           <p>
             Adquiere una asesoría gratuita en seguro de vida, auto y gastos
             médicos. No lo dejes
           </p>
           <p>para después y empieza hoy a cuidar tu futuro.</p>
         </div>
-        <div className="flex text-[12px] md:text-[16px] gap-x-8 mb-12">
+        <div className="animated-button flex text-[12px] md:text-[16px] gap-x-8 mb-12">
           <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
