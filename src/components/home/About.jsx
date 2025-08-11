@@ -23,7 +23,7 @@ export const About = () => {
   const paragraphs = gsap.utils.toArray("section p")
 
   paragraphs.forEach((text) => {
-    const split = new SplitText(text, { type: "chars" })
+    const split = new SplitText(text, { type: "words,chars" })
 
     const img = text.parentElement.querySelector("img")
 
