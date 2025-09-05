@@ -209,7 +209,7 @@ export const Contact = () => {
                 "¡Todo Listo!"
               )}
             </button>
-          </form>
+          </form> 
         </div>
       </div>
     </div>
