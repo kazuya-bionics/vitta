@@ -107,7 +107,7 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-screen bg-white sticky top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-screen bg-gradient-to-b from-white via-yellow-100 to-orange-300 sticky top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <Plane/>
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
@@ -125,10 +125,10 @@ const Hero = ({ heroTrigger }) => {
             médicos. No lo dejes para después y empieza hoy a cuidar tu futuro.</p>
         </div>
         <div className="animated-button flex text-[14px] md:text-[16px] gap-x-8 mb-12">
-          <Button styles="p-2 bg-[#FE7743] text-white border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
+          <Button styles="p-2 bg-[#FE7743] text-white rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
-          <Button styles="p-2 border-2 border-black rounded-[45px] hover:scale-105 transition duration-300" soyPublico={""}>
+          <Button styles="p-2 bg-white rounded-[45px] hover:scale-105 transition duration-300" soyPublico={""}>
             Habla con un asesor
           </Button>
         </div>

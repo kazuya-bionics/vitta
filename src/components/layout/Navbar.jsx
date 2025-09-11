@@ -21,7 +21,7 @@ export const Navbar = () => {
   return (
     <>
       <div className='w-full fixed h-16 flex justify-between items-center top-0 px-8 z-40'>
-        <Link href="/">Vitta</Link>
+        <Link href="/" className="font-bold text-xl">Vitta</Link>
         <ul className='hidden md:flex gap-x-4'>
           <Link href="/casos">Casos</Link>
           <Link href="/nosotros">Nosotros</Link>

@@ -1,6 +1,7 @@
 "use client"
 import { useActionState } from "react"
-import { Facebook, Instagram, Music } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
+import { FaTiktok } from "react-icons/fa6"
 import { submitContactForm } from "@/app/actions"
 
 const initialState = {
@@ -32,7 +33,7 @@ export const Contact = () => {
 
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-bold text-slate-800">Teléfono</h3>
-              <a href="tel:+527205274302" className="text-slate-600 hover:text-slate-800 transition-colors">
+              <a href="tel:+525611100347" className="text-slate-600 hover:text-slate-800 transition-colors">
                 +52 720 527 4302
               </a>
             </div>
@@ -43,7 +44,7 @@ export const Contact = () => {
             <ul className="flex gap-3">
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/61579043823512"
                   className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
                   aria-label="Facebook"
                 >
@@ -52,7 +53,7 @@ export const Contact = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/vittaseguro/"
                   className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
                   aria-label="Instagram"
                 >
@@ -65,7 +66,7 @@ export const Contact = () => {
                   className="p-3 hover:scale-105 hover:bg-orange-500 bg-orange-400 text-white rounded-full transition-all duration-200 inline-flex"
                   aria-label="TikTok"
                 >
-                  <Music size={20} />
+                  <FaTiktok size={20} />
                 </a>
               </li>
             </ul>
