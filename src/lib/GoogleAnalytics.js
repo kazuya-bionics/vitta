@@ -4,23 +4,25 @@ import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
-const GA_MEASUREMENT_ID = 'G-SQYT1Y8PDJ'; // tu ID de GA4
+const GA_MEASUREMENT_ID = 'G-SQYT1Y8PDJ';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
 
-  // Enviar page_view en cambios de ruta
+  // Registrar cambios de página, solo en producción
   useEffect(() => {
-    if (typeof window.gtag !== 'undefined') {
+    if (process.env.NODE_ENV === 'production' && typeof window.gtag !== 'undefined') {
       window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: pathname,
       });
     }
   }, [pathname]);
 
+  // Scripts de GA solo cargan en producción
+  if (process.env.NODE_ENV !== 'production') return null;
+
   return (
     <>
-      {/* Script base de Google Analytics */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
