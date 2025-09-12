@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 import Pixel from "@/lib/Pixel";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
-//metadata
+// metadata
 export const metadata = {
   title: 'Vitta Seguro',
   description: 'Protección confiable para servidores públicos y quienes aman',
@@ -38,7 +38,15 @@ export const metadata = {
       },
     ],
   },
+  other: {
+    'og:image': 'https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:alt': 'Vitta Seguro',
+    'fb:app_id': '2512341305832879', // <- Aquí tu App ID de Facebook
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
