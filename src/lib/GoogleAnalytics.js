@@ -2,23 +2,36 @@
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-SQYT1Y8PDJ';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
+  const [isMexico, setIsMexico] = useState(false);
 
-  // Registrar cambios de página, solo en producción
+  // Detectar país del usuario (geolocalización por IP)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production' && typeof window.gtag !== 'undefined') {
-      window.gtag('config', GA_MEASUREMENT_ID, {
-        page_path: pathname,
-      });
+    if (process.env.NODE_ENV === 'production') {
+      fetch('https://ipapi.co/json/')
+        .then(res => res.json())
+        .then(data => {
+          if (data.country_name === 'Mexico') {
+            setIsMexico(true);
+          }
+        })
+        .catch(err => console.error('Error geolocalización:', err));
     }
-  }, [pathname]);
+  }, []);
 
-  // Scripts de GA solo cargan en producción
+  // Registrar page_view solo si el usuario está en México
+  useEffect(() => {
+    if (isMexico && typeof window.gtag !== 'undefined') {
+      window.gtag('config', GA_MEASUREMENT_ID, { page_path: pathname });
+    }
+  }, [pathname, isMexico]);
+
+  // Scripts solo en producción
   if (process.env.NODE_ENV !== 'production') return null;
 
   return (
