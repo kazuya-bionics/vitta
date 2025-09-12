@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 // anuncios
 import Pixel from "@/lib/Pixel";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +20,6 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Vitta Seguro",
   description: "Protección confiable para servidores públicos y quienes aman",
-  keywords: [
-    "seguro de vida",
-    "México",
-    "protección servidores públicos",
-    "Vitta Seguro",
-  ],
-  authors: [{ name: "Vitta", url: "https://www.vittaseguro.com.mx" }],
   openGraph: {
     title: "Vitta Seguro",
     description: "Protección confiable para servidores públicos y quienes aman",
@@ -42,14 +36,22 @@ export const metadata = {
       },
     ],
   },
-  other: {
-    "fb:app_id": "2512341305832879",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es-mx">
+      <Head>
+        {/* Forzamos meta con "property" */}
+        <meta property="fb:app_id" content="2512341305832879" />
+        <meta
+          property="og:image"
+          content="https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Vitta Seguro" />
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
         <Pixel />
