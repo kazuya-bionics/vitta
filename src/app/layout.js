@@ -20,6 +20,8 @@ import GoogleAnalytics from "@/lib/GoogleAnalytics";
 export const metadata = {
   title: 'Vitta Seguro',
   description: 'Protección confiable para servidores públicos y quienes aman',
+  keywords: ['seguro de vida', 'México', 'protección servidores públicos', 'Vitta Seguro'],
+  authors: [{ name: 'Vitta', url: 'https://www.vittaseguro.com.mx' }],
   openGraph: {
     title: 'Vitta Seguro',
     description: 'Protección confiable para servidores públicos y quienes aman',
@@ -37,8 +39,6 @@ export const metadata = {
     ],
   },
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
