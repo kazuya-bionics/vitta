@@ -54,7 +54,7 @@ export default function Home() {
     <>
     <main>
     <MouseEffects/>
-      <div ref={containerHero} className="relative h-[200vh] bg-black">
+      <div ref={containerHero} className="relative h-[200vh] bg-gray-50">
         <Hero heroTrigger={heroTrigger} />
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
@@ -107,16 +107,16 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-screen bg-gradient-to-b from-white via-yellow-100 to-orange-300 sticky top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-screen sticky bg-white top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <Plane/>
       <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
-        <div ref={textPrincipalContainer} className="text-5xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
+        <div ref={textPrincipalContainer} className="text-4xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
           <h3>
-            ¿No te responde tu <span className="text-orange-400">asesor?</span> 
+            ¿No te responde tu <span className="text-orange-300">asesor?</span> 
           </h3>
           <h3>
-            <span className="text-orange-400 md:border-b-2 border-black">Nosotros</span> te respaldamos
+            <span className="text-orange-300 md:border-b-2 border-black">Nosotros</span> te respaldamos
           </h3>
         </div>
         <div className="simple-text text-[14px] md:text-[16px] opacity-50 px-4">
@@ -125,7 +125,7 @@ const Hero = ({ heroTrigger }) => {
             médicos. No lo dejes para después y empieza hoy a cuidar tu futuro.</p>
         </div>
         <div className="animated-button flex text-[14px] md:text-[16px] gap-x-8 mb-12">
-          <Button styles="p-2 bg-[#FE7743] text-white rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
+          <Button styles="p-2 bg-orange-300 text-white rounded-[45px] hover:scale-105 transition duration-300" soyPublico={"no soy servidor publico"}>
             No soy servidor público
           </Button>
           <Button styles="p-2 bg-white rounded-[45px] hover:scale-105 transition duration-300" soyPublico={""}>
