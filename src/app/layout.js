@@ -19,6 +19,7 @@ export const metadata = {
 
 //anuncios 
 import Pixel from "@/lib/Pixel";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
 export default function RootLayout({ children }) {
   return (
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics/>
         <Pixel/>
         <Layout>
           {children}
