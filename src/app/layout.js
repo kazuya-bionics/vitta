@@ -2,6 +2,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Layout } from "@/components/layout/Layout";
 
+// Componentes de seguimiento
+import Pixel from "@/lib/Pixel";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
+
+// Fuentes
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,53 +17,48 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-//anuncios 
-import Pixel from "@/lib/Pixel";
-import GoogleAnalytics from "@/lib/GoogleAnalytics";
-
-// metadata
-export const metadata = {
-  title: 'Vitta Seguro',
-  description: 'Protección confiable para servidores públicos y quienes aman',
-  keywords: ['seguro de vida', 'México', 'protección servidores públicos', 'Vitta Seguro'],
-  authors: [{ name: 'Vitta', url: 'https://www.vittaseguro.com.mx' }],
-  openGraph: {
-    title: 'Vitta Seguro',
-    description: 'Protección confiable para servidores públicos y quienes aman',
-    url: 'https://www.vittaseguro.com.mx',
-    siteName: 'Vitta Seguro',
-    locale: 'es_MX',
-    type: 'website',
-    images: [
-      {
-        url: 'https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Vitta Seguro',
-      },
-    ],
-  },
-  other: {
-    'og:image': 'https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg',
-    'og:image:width': '1200',
-    'og:image:height': '630',
-    'og:image:alt': 'Vitta Seguro',
-    'fb:app_id': '2512341305832879', // <- Aquí tu App ID de Facebook
-  },
+// Metadata
+const metadata = {
+  title: "Vitta Seguro",
+  description: "Protección confiable para servidores públicos y quienes aman",
+  keywords: ["seguro de vida", "México", "protección servidores públicos", "Vitta Seguro"],
+  fbAppId: "2512341305832879",
+  ogImage: "https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg",
+  url: "https://www.vittaseguro.com.mx",
+  locale: "es_MX",
 };
-
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-mx">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <GoogleAnalytics/>
-        <Pixel/>
-        <Layout>
-          {children}
-        </Layout>
+    <html lang="es-MX">
+      <head>
+        <meta charSet="UTF-8" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="geo.region" content="MX" />
+        <meta name="geo.placename" content="México" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={metadata.ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Vitta Seguro" />
+        <meta property="fb:app_id" content={metadata.fbAppId} />
+
+        {/* Google Analytics modular */}
+        <GoogleAnalytics />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Facebook Pixel modular */}
+        <Pixel />
+
+        {/* Layout principal */}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
