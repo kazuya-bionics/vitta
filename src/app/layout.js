@@ -23,7 +23,7 @@ const metadata = {
   description: "Protección confiable para servidores públicos y quienes aman",
   keywords: ["seguro de vida", "México", "protección servidores públicos", "Vitta Seguro"],
   fbAppId: "2512341305832879",
-  ogImage: "https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg",
+  ogImage: content="/assets/bgHeroSection.jpg",
   url: "https://www.vittaseguro.com.mx",
   locale: "es_MX",
 };
