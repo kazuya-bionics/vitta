@@ -15,6 +15,7 @@ import {Button} from "../components/home/Button"
 import bgHeroSection from "../../public/assets/images/bgHeroSection.jpg"
 import { Contact } from "@/components/home/Contact"
 import { MouseEffects } from "@/components/home/MouseEffects"
+import { CanvasContainer } from "@/components/home/three/CanvasContainer"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -54,7 +55,10 @@ export default function Home() {
     <>
     <main>
     <MouseEffects/>
-      <div ref={containerHero} className="relative h-[200vh] bg-gray-50">
+      <div ref={containerHero} className="relative h-[200vh] bg-white">
+        
+        <CanvasContainer/>
+
         <Hero heroTrigger={heroTrigger} />
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />
       </div>
@@ -107,10 +111,10 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-screen sticky bg-white top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-svh sticky bg-white top-0 overflow-hidden flex justify-center px-8 z-0"
     >
       <Plane/>
-      <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8">
+      <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8 w-full h-svh p-8 rounded-[45] bg-gray-100">
         <div ref={textPrincipalContainer} className="text-4xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
           <h3>
             ¿No te responde tu <span className="text-orange-300">asesor?</span> 
@@ -152,6 +156,7 @@ const HeroSection = ({ heroAnotherTrigger }) => {
 
      
       <div className="absolute inset-0 bg-black/50 z-10" />
+
 
      
       <div className="relative z-20 text-white p-8">
