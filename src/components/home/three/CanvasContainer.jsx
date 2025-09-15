@@ -4,7 +4,7 @@ import { Model } from "./Model"
 
 export const CanvasContainer = () => {
   return (
-    <div className="absolute md:top-20 top-[30%] left-0 w-full md:h-[55vh] h-[30vh] z-10 pointer-events-none">
+    <div className="absolute md:top-20 top-32 left-0 w-full md:h-[55vh] h-[30vh] z-10 pointer-events-none">
       <Canvas
         shadows
         camera={{ position: [0, 2, 6], fov: 50 }}
