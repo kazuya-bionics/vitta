@@ -2,8 +2,19 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 
+import { useControls } from "leva";
+
 export const Model = () => {
   const ref = useRef();
+
+  const modelProps = useControls({
+      thickness: {value: 0.2, min: 0, max: 3, step: 0.05},
+      roughness: {value:0, min:0, max: 1, step: 0.1},
+      transmission : { value:0, min:0, max: 1, step: 0.1 },     // transmisión máxima
+      ior: {value: 1.2, min:0 , max:3 , step:0.1},
+      chromaticAberration: {value: 0.02, min: 0, max: 2},
+      backside: {value: true}
+  })
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
@@ -18,15 +29,7 @@ export const Model = () => {
       {/* Geometría por defecto de Three.js */}
       <torusKnotGeometry args={[1, 0.3, 128, 32]} />
       {/* Material transparente tipo vidrio */}
-      <MeshTransmissionMaterial
-        thickness={0.5}
-        roughness={0.1}
-        transmission={1}      // transmisión máxima
-        ior={1.5}
-        chromaticAberration={0.0} // opcional
-        backside={true}
-        color="#ffffff" 
-      />
+      <MeshTransmissionMaterial {...modelProps}/>
     </mesh>
   );
 }

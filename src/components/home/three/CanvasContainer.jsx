@@ -17,7 +17,7 @@ export const CanvasContainer = () => {
 
         <Model /> {/* tu objeto 3D */}
 
-        <Environment preset="sunset" background={false} />
+        <Environment preset="city" background={false} />
 
       </Canvas>
     </div>

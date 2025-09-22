@@ -57,7 +57,6 @@ export default function Home() {
     <MouseEffects/>
       <div ref={containerHero} className="relative h-[200vh] bg-white">
         
-        <CanvasContainer/>
 
         <Hero heroTrigger={heroTrigger} />
         <HeroSection heroAnotherTrigger={heroAnotherTrigger} />

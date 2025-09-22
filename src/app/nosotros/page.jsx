@@ -91,7 +91,7 @@ const Nosotros = () => {
       
            
             <div className="relative flex flex-col items-center justify-center gap-y-4 z-20 text-white p-8 text-center">
-              <h3 className="text-6xl font-bold uppercase">Porque vitta es lo mejor para ti</h3>
+              <h3 className="text-6xl font-bold uppercase">¿Porque vitta es lo mejor para ti?</h3>
               <h3 className="text-sm opacity-80 ">Vitta esta comprometido con el una politica justa y transparente, mira todo lo que vitta tiene para ti</h3>
               <button className="p-1 text-sm flex text-white/80 justify-center items-center border-white hover:border-white/75 bg-black rounded-[45px] border-2 w-[100px]"> cotiza aqui </button>
             </div>
@@ -152,9 +152,11 @@ const Nosotros = () => {
 
             {/* Call to Action Button */}
             <div className="pt-4">
-              <button className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/25 hover:scale-105">
-                <span>Conoce más sobre nosotros</span>
-                <FaRocket className="w-4 h-4" />
+              <button className=" bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/25 hover:scale-105">
+                <a className="inline-flex items-center gap-3" href="como obtengo el link de perfil de facebook. este me sirve https://www.facebook.com/profile.php?id=61579043823512">
+                  <span>Conoce más sobre nosotros</span>
+                  <FaRocket className="w-4 h-4" />
+                </a>
               </button>
             </div>
           </div>
