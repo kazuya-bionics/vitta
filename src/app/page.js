@@ -110,10 +110,10 @@ const Hero = ({ heroTrigger }) => {
   return (
     <section
       ref={heroTrigger}
-      className="h-svh sticky bg-white top-0 overflow-hidden flex justify-center px-8 z-0"
+      className="h-svh sticky bg-white top-0 overflow-hidden flex justify-center md:px-8 z-0"
     >
       <Plane/>
-      <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8 w-full h-svh p-8 rounded-[45] bg-gray-100">
+      <div className="mt-16 flex flex-col justify-center items-center text-center gap-y-8 w-full h-svh p-8 md:rounded-[45] bg-gray-50">
         <div ref={textPrincipalContainer} className="text-4xl lg:text-6xl font-bold uppercase text-principal-container overflow-hidden">
           <h3>
             ¿No te responde tu <span className="text-orange-300">asesor?</span> 

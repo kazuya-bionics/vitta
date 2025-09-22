@@ -57,7 +57,7 @@ export const Transition = () => {
   }, []);
 
   return (
-    <div className="w-full h-svh flex justify-center items-center">
+    <div className="w-full bg-orange-300 h-svh flex justify-center items-center">
       <motion.div 
         initial={{opacity:0}}
         whileInView={{
