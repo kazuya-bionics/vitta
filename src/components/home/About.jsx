@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useEffect } from "react";
+
+import { motion } from "motion/react"
+
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -55,12 +58,23 @@ export const Transition = () => {
 
   return (
     <div className="w-full h-svh flex justify-center items-center">
-      <dotlottie-player
-        src="/SandyLoading.lottie"
-        autoplay
-        loop
-        style={{ width: "100%", height: "100svh" }}
-      ></dotlottie-player>
+      <motion.div 
+        initial={{opacity:0}}
+        whileInView={{
+          opacity: 1,
+          transition:{
+            duration: 1,
+            delay:.3
+          }
+        }}
+      >
+        <dotlottie-player
+          src="/SandyLoading.lottie"
+          autoplay
+          loop
+          style={{ width: "100%", height: "100svh" }}
+        ></dotlottie-player>
+      </motion.div>
     </div>
   );
 };
