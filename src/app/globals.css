@@ -1,14 +1,29 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-brand: #FF714B;
+  --color-accent: #4D2D8C;
+  --color-bg: #f2f2f2;
+  /* etc */
 }
 
 @font-face {
-    font-family: milky;
-    src: url(../../public/assets/typography/milky/MilkyWalky-Regular.ttf);
+  font-family: chillax;
+  src: url(../../public/assets/typography/chillax.ttf);
 }
 
-.hero-title {
-    font-family: milky;
+* {
+  font-family: chillax;
+}
+
+div, p, span {
+  font-weight: 500;
+}
+
+h3, h1, span {
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
 }

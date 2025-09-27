@@ -20,13 +20,14 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className='w-full fixed h-16 flex justify-between items-center top-0 px-8 z-40 bg-white'>
+      <div className='w-full fixed h-16 flex justify-between items-center top-0 px-8 z-40'>
         <Link href="/" className="font-semibold text-lg">Vitta</Link>
-        <ul className='hidden md:flex gap-x-4'>
+        <ul className='hidden bg-white rounded-[45] text-md drop-shadow-lg p-2 md:flex gap-x-4'>
           <Link href="/casos">Casos</Link>
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/servicios">Servicios</Link>
         </ul>
+        <Link href="/#contacto">Contacto</Link>
         <button onClick={openMenu} className='md:hidden rounded-full bg-orange-300 p-2 text-lg'>
           <FaAlignRight />
         </button>
