@@ -24,21 +24,7 @@ export const Loader = () => {
         }
     })
 
-    gsap.set(".box-principal", {
-        opacity:1
-    })
-
     const split = SplitText.create(".text-initial", { type: "words, chars" });
-
-    tl.to(".box-principal",{
-        scaleY: 0,
-        opacity: 0,
-        duration: .8,
-        stagger: {
-            each: .03,
-            from: "center"
-        }
-    })
 
     tl.from(split.chars, {
         opacity: 0,
@@ -74,13 +60,6 @@ export const Loader = () => {
       ref={loaderRef}
       className="w-full h-screen fixed top-0 left-0 z-[9999] bg-white flex items-center justify-center overflow-hidden p-12"
     >
-        <div className='w-full h-screen flex absolute top-0 right-0'>
-            <div className='w-[20%] h-screen bg-black box-principal'>sfas</div>
-            <div className='w-[20%] h-screen bg-black box-principal'>sfas</div>
-            <div className='w-[20%] h-screen bg-black box-principal'>sfas</div>
-            <div className='w-[20%] h-screen bg-black box-principal'>sfas</div>
-            <div className='w-[20%] h-screen bg-black box-principal'>sfas</div>
-        </div>
         <div className='overflow-hidden'>
             <h3 className='text-initial text-5xl font-semibold uppercase'>Tu legado empieza con una buena elección.</h3>
         </div>
