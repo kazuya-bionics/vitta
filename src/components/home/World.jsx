@@ -32,7 +32,7 @@ export const World = () => {
       <div className="relative w-full max-w-4xl h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1000px] flex justify-center items-center">
         {isVisible && (
           <Spline
-            scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
+            scene="https://prod.spline.design/cbj0E6ErjRkv7DoV/scene.splinecode"
             style={{ width: "100%", height: "100%", opacity: 0.5 }}
           />
         )}
