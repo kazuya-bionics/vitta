@@ -26,7 +26,6 @@ export const Navbar = () => {
           <Link href="/casos">Casos</Link>
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/servicios">Servicios</Link>
-          <Link href="/#contacto">Contacto</Link>
         </ul>
         <div className="flex gap-x-2 justify-center items-center">
           <button onClick={openMenu} className='md:hidden rounded-full bg-orange-300 p-2 text-lg'>

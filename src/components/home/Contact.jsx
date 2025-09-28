@@ -13,7 +13,7 @@ export const Contact = () => {
 
   return (
     <div
-      id="contact"
+      id="contacto"
       className="w-full min-h-screen flex flex-col justify-center items-center bg-transparent px-4 py-12 sm:px-8 lg:px-8"
     >
       <h4 className="text-3xl font-semibold text-slate-800 text-center mb-8 md:mb-12">

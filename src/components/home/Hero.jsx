@@ -51,7 +51,7 @@ export const Hero = () => {
       </div>
 
       {/* Modelo Spline */}
-      <div className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen mt-8 lg:mt-0">
+      <div className="w-full lg:w-1/2 h-screen sm:h-96 lg:h-screen mt-8 lg:mt-0">
         <Spline
           scene="https://prod.spline.design/iYt6P-rdpnjj8Fvk/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
@@ -60,7 +60,7 @@ export const Hero = () => {
 
       {/* Luz radial decorativa */}
       <div
-        className="w-[60%] sm:w-[50%] h-[60%] sm:h-screen absolute left-[-30%] rounded-full blur-3xl"
+        className="w-[60%] hidden md:flex sm:w-[50%] h-[60%] sm:h-screen absolute left-[-30%] rounded-full blur-3xl"
         style={{
           background:
             'radial-gradient(circle, rgba(255,113,75,0.8) 0%, rgba(255,113,75,0) 100%)',
