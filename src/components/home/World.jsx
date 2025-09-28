@@ -1,16 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
-
-// Lazy load del componente Spline para que no se ejecute en SSR
-const SplineLazy = dynamic(() => import("@splinetool/react-spline"), { ssr: false });
+import Spline from "@splinetool/react-spline";
 
 export const World = () => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
 
-  // Intersection Observer para cargar Spline solo cuando el componente esté visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -19,10 +15,13 @@ export const World = () => {
           observer.disconnect(); // Solo cargamos una vez
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 } // Cargar cuando al menos 30% sea visible
     );
 
-    if (containerRef.current) observer.observe(containerRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 
@@ -32,9 +31,9 @@ export const World = () => {
       className="w-full min-h-screen relative flex justify-center items-center bg-[#F2F2F2] px-4 lg:px-8"
     >
       {/* Canvas Spline */}
-      <div className="w-full max-w-4xl h-[800px] sm:h-[900px] md:h-[1000px] lg:h-[1200px] flex justify-center items-center">
+      <div className="w-full max-w-4xl h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1000px] flex justify-center items-center">
         {isVisible && (
-          <SplineLazy
+          <Spline
             scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
             style={{
               width: "100%",
