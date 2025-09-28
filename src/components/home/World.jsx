@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Spline from "@splinetool/react-spline";
+import dynamic from "next/dynamic";
+
+const SplineLazy = dynamic(() => import("@splinetool/react-spline"), { ssr: false });
 
 export const World = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,28 +14,24 @@ export const World = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Solo cargamos una vez
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } // Cargar cuando al menos 30% sea visible
+      { threshold: 0.3 }
     );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
+    if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="w-full min-h-screen relative flex justify-center items-center bg-[#F2F2F2] px-4 lg:px-8"
+      className="w-full min-h-screen relative flex justify-center items-center px-4 lg:px-8"
     >
       {/* Canvas Spline */}
-      <div className="w-full max-w-4xl h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1000px] flex justify-center items-center">
+      <div className="w-full max-w-4xl h-[800px] sm:h-[900px] md:h-[1000px] lg:h-[1200px] flex justify-center items-center">
         {isVisible && (
-          <Spline
+          <SplineLazy
             scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
             style={{
               width: "100%",
