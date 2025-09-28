@@ -7,7 +7,7 @@ import { LiaChartBarSolid } from "react-icons/lia";
 
 export const Services = () => {
   return (
-    <div className="w-full mt-8 flex justify-center items-center">
+    <div className="w-full py-16 flex justify-center items-center">
       <div className="w-[90vw] rounded-[45px] p-8 bg-white shadow-2xl grid grid-cols-1 md:grid-cols-4 overflow-hidden border border-slate-200">
         
         {/* Encabezado */}
