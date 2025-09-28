@@ -28,7 +28,7 @@ export const Navbar = () => {
           <Link href="/servicios">Servicios</Link>
         </ul>
         <div className="flex gap-x-2 justify-center items-center">
-          <button onClick={openMenu} className='md:hidden rounded-full bg-orange-300 p-2 text-lg'>
+          <button onClick={openMenu} className={`md:hidden rounded-full ${isOpen ? "bg-accent" : "bg-brand"} p-2 text-lg`}>
             <FaAlignRight />
           </button>
           <Link className="hidden md:flex" href="/#contacto">Contacto</Link>

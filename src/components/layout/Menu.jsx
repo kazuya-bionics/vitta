@@ -73,7 +73,7 @@ export const Menu = ({ isOpen }) => {
   return (
     <div
       ref={container}
-      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-rose-500/75 backdrop-blur-lg fixed z-30 top-0 left-0"
+      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-brand/80 backdrop-blur-sm fixed z-30 top-0 left-0"
     >
       <ul className="flex flex-col gap-y-8 text-5xl font-black uppercase">
         {["Casos", "Nosotros", "Servicios", "Contacto"].map((item, index) => (
