@@ -51,7 +51,7 @@ export const Hero = () => {
       </div>
 
       {/* Modelo Spline */}
-      <div className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen mt-8 lg:mt-0">
+      <div className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen lg:mt-0">
         <Spline
           scene="https://prod.spline.design/iYt6P-rdpnjj8Fvk/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
