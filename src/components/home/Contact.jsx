@@ -3,6 +3,7 @@ import { useActionState } from "react"
 import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa6"
 import { submitContactForm } from "@/app/actions"
 import Link from "next/link"
+import { Button } from "."
 
 const initialState = {
   message: "",
@@ -38,9 +39,7 @@ export const Contact = () => {
 
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-bold text-black-800">Teléfono</h3>
-              <a href="tel:+525611100347" className="text-black-600 hover:text-black-800 transition-colors">
-                +52 56 1110 0347
-              </a>
+              <Button styles={"w-fit text-black-600 hover:text-black-800 transition-colors"}>+52 56 1110 0347</Button>
             </div>
           </div>
 
