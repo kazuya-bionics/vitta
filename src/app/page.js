@@ -2,6 +2,7 @@ import { MouseEffects } from "@/components/home/MouseEffects"
 import { Hero, About, Contact, Intersection_1 } from "@/components/home/"
 import { Video } from "@/components/home/Video"
 import { World } from "@/components/home/World"
+import { Services } from "@/components/home/Services"
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
       <MouseEffects/>
       <About />
       <Video/>
+      <Services/>
       <World/>
       <Contact/>
     </main>

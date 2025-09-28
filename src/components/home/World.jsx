@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 
 export const World = () => {
   return (
-    <div className='w-full mt-8 px-8 h-screen flex justify-center items-center text-2xl flex-col relative'>
+    <div className='w-full px-8 h-screen flex justify-center items-center text-2xl flex-col relative'>
         <div className='text-center opacity-75 md:text-4xl'>
             <h3>
                 PROTEGER Y AMAR ES IGUAL,
