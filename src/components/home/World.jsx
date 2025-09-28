@@ -1,23 +1,48 @@
 "use client";
 
-import Spline from '@splinetool/react-spline';
+import { useState, useEffect, useRef } from "react";
+import Spline from "@splinetool/react-spline";
 
 export const World = () => {
-  return (
-    <div className="w-full min-h-screen relative flex justify-center items-center bg-[#F2F2F2] px-4 lg:px-8">
-      
-      {/* Canvas Spline */}
-         <div className="w-[100svw] max-w-4xl h-[100svh] sm:h-[900px] md:h-[1000px] lg:h-[1200px] flex justify-center items-center">
-        <Spline
-          scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
-          style={{
-            width: "100%",
-            height: "100%",
-            opacity: 0.5, // Opacidad reducida
-          }}
-        />
-      </div>
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Solo cargamos una vez
+        }
+      },
+      { threshold: 0.3 } // Cargar cuando al menos 30% sea visible
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="w-full min-h-screen relative flex justify-center items-center bg-[#F2F2F2] px-4 lg:px-8"
+    >
+      {/* Canvas Spline */}
+      <div className="w-full max-w-4xl h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1000px] flex justify-center items-center">
+        {isVisible && (
+          <Spline
+            scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
+            style={{
+              width: "100%",
+              height: "100%",
+              opacity: 0.5,
+            }}
+          />
+        )}
+      </div>
 
       {/* Texto centrado sobre el canvas */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">

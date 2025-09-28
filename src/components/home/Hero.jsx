@@ -1,9 +1,31 @@
-'use client';
+"use client";
 
-import Spline from '@splinetool/react-spline';
-import { Button } from './Button';
+import { useState, useEffect, useRef } from "react";
+import Spline from "@splinetool/react-spline";
+import { Button } from "./Button";
 
 export const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const splineRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Solo cargamos una vez
+        }
+      },
+      { threshold: 0.3 } // Cargar cuando al menos 30% sea visible
+    );
+
+    if (splineRef.current) {
+      observer.observe(splineRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="w-full min-h-screen relative bg-[#F2F2F2] flex flex-col lg:flex-row items-center px-4 lg:px-8 pt-8 lg:py-0">
       
@@ -50,12 +72,17 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Modelo Spline */}
-      <div className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen lg:mt-0">
-        <Spline
-          scene="https://prod.spline.design/iYt6P-rdpnjj8Fvk/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
-        />
+      {/* Modelo Spline con lazy load */}
+      <div
+        ref={splineRef}
+        className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen lg:mt-0"
+      >
+        {isVisible && (
+          <Spline
+            scene="https://prod.spline.design/iYt6P-rdpnjj8Fvk/scene.splinecode"
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
       </div>
 
       {/* Luz radial decorativa */}
@@ -63,7 +90,7 @@ export const Hero = () => {
         className="w-[60%] hidden md:flex sm:w-[50%] h-[60%] sm:h-screen absolute left-[-30%] rounded-full blur-3xl"
         style={{
           background:
-            'radial-gradient(circle, rgba(255,113,75,0.8) 0%, rgba(255,113,75,0) 100%)',
+            "radial-gradient(circle, rgba(255,113,75,0.8) 0%, rgba(255,113,75,0) 100%)",
         }}
       />
     </div>
