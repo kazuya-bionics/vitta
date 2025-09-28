@@ -3,12 +3,12 @@ import Link from "next/link"
 export const About = () => {
   return (
     <div className="w-full h-screen relative">
-      <div className="absolute left-8 top-24 text-4xl">
+      <div className="absolute left-8 top-24 text-2xl md:text-4xl">
         <h3>Somos Vitta, <span className="text-accent">especialistas</span> en</h3>
         <h3>seguros de <span className="text-accent">vida</span></h3>
         <h3><span className="text-accent">Amamos</span> lo que hacemos</h3>
       </div>
-      <div className="absolute right-8 bottom-24 text-2xl">
+      <div className="absolute right-8 bottom-24 text-sm md:text-2xl">
         <p>Cada promesa cumplida es un</p>
         <p>compromiso con tu vida.</p>
         <p>Descubre cómo en Vitta hacemos</p>
@@ -17,7 +17,7 @@ export const About = () => {
           href="https://www.facebook.com/profile.php?id=61579043823512"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block p-2 bg-brand text-base rounded-[45px] mt-4"
+          className="inline-block p-2 bg-brand text-sm md:text-base rounded-[45px] mt-4"
         >
           Quienes somos...
         </Link>

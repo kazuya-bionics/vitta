@@ -12,6 +12,13 @@
   src: url(../../public/assets/typography/chillax.ttf);
 }
 
+canvas.spline-canvas {
+  mix-blend-mode: screen; /* o multiply, overlay, etc. */
+  position: relative;
+  z-index: 1;
+}
+
+
 * {
   font-family: chillax;
 }
