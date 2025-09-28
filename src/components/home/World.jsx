@@ -7,7 +7,7 @@ export const World = () => {
     <div className="w-full min-h-screen relative flex justify-center items-center bg-[#F2F2F2] px-4 lg:px-8">
       
       {/* Canvas Spline */}
-         <div className="w-full max-w-4xl h-[800px] sm:h-[900px] md:h-[1000px] lg:h-[1200px] flex justify-center items-center">
+         <div className="w-[100svw] max-w-4xl h-[100svh] sm:h-[900px] md:h-[1000px] lg:h-[1200px] flex justify-center items-center">
         <Spline
           scene="https://prod.spline.design/m7LmZnZAPJcl8h4p/scene.splinecode"
           style={{
