@@ -8,8 +8,8 @@ export const Hero = () => {
     <div className="w-full min-h-screen relative bg-[#F2F2F2] flex flex-col lg:flex-row items-center px-4 lg:px-8 pt-8 lg:py-0">
       
       {/* Texto */}
-      <div className="w-full h-screen lg:w-1/2 z-10 pr-0 lg:pr-8 flex flex-col justify-center gap-y-4">
-        <div className="border-2 border-black rounded-full text-xs sm:text-sm p-2 sm:w-52 mb-2 text-center lg:text-left mx-auto lg:mx-0">
+      <div className="w-full lg:w-1/2 z-10 pr-0 lg:pr-8 flex flex-col justify-center gap-y-4">
+        <div className="border-2 border-black rounded-full text-xs sm:text-sm p-2 sm:w-52 mb-2 mt-16 text-center lg:text-left mx-auto lg:mx-0">
           Proteger también es amar
         </div>
 
@@ -51,7 +51,7 @@ export const Hero = () => {
       </div>
 
       {/* Modelo Spline */}
-      <div className="w-full lg:w-1/2 h-96 sm:h-96 lg:h-screen mt-8 lg:mt-0">
+      <div className="w-full lg:w-1/2 h-80 sm:h-96 lg:h-screen mt-8 lg:mt-0">
         <Spline
           scene="https://prod.spline.design/iYt6P-rdpnjj8Fvk/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
