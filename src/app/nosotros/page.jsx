@@ -1,5 +1,7 @@
 "use client"
 
+import Spline from '@splinetool/react-spline/next';
+
 import casesImageTwo from "../../../public/assets/images/casesImageTwo.jpg"
 import heroImageLife from "../../../public/assets/images/heroImageLife.jpg"
 import Image from "next/image"
@@ -80,15 +82,12 @@ const Nosotros = () => {
   return (
     <main>
       <div className="h-screen flex flex-col gap-y-4 justify-center items-center relative z-10 overflow-hidden">   
-            <Image
-              src={casesImageTwo}
-              alt="Fondo sección héroe"
-              fill
-              className="object-cover object-center"
-              priority
-            />
-      
-           
+            <Spline scene="https://prod.spline.design/CnFckvEnLBOlki4m/scene.splinecode" 
+styles={{
+  width: "100%"
+  height: "100svh"
+}}
+      />
             <div className="absolute inset-0 bg-black/50 z-10" />
       
            
