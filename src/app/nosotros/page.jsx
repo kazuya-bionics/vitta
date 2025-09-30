@@ -84,7 +84,7 @@ const Nosotros = () => {
       <div className="h-screen flex flex-col gap-y-4 justify-center items-center relative z-10 overflow-hidden">   
             <Spline scene="https://prod.spline.design/CnFckvEnLBOlki4m/scene.splinecode" 
 styles={{
-  width: "100%"
+  width: "100%,
   height: "100svh"
 }}
       />
