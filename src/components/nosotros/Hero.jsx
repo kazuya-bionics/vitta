@@ -8,7 +8,7 @@ export const Hero = () => {
         
         <div className="absolute inset-0 pointer-events-none">
           <Spline
-            scene="https://prod.spline.design/6RjOy0npgxEdXw0E/scene.splinecode"
+            scene="https://prod.spline.design/6KVndaDY-gWauCS0/scene.splinecode" 
             style={{ width: "100%", height: "100%" }}
           />
         </div>

@@ -11,7 +11,7 @@ export const Hero = () => {
         </div>
         <div className="absolute inset-0 pointer-events-none">
             <Spline
-            scene="https://prod.spline.design/iDMetPUInKyq6itB/scene.splinecode"
+            scene="https://prod.spline.design/6KVndaDY-gWauCS0/scene.splinecode" 
             style={{ width: "100%", height: "100%" }}
             />
         </div>
