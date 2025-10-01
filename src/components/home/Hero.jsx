@@ -28,12 +28,14 @@ export const Hero = () => {
           <Button
             styles="bg-[var(--color-accent)] rounded-full text-sm text-white p-2 w-full sm:w-40"
             soyPublico={true}
+            mensaje={""}
           >
             Soy servidor público
           </Button>
           <Button
             styles="bg-[var(--color-accent)] rounded-full text-sm text-white p-2 w-full sm:w-40"
             soyPublico={false}
+            mensaje={""}
           >
             No lo soy
           </Button>

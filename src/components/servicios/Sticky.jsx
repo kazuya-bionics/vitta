@@ -1,4 +1,5 @@
 import { FaHeartbeat, FaCar, FaBriefcaseMedical } from "react-icons/fa"
+import { Button } from "../home";
 
 export const Sticky = () => {
 
@@ -9,6 +10,7 @@ export const Sticky = () => {
       title: "Seguro de Vida",
       description:
         "Protege a tu familia con nuestros planes de seguro de vida flexibles y accesibles. Cobertura completa para tu tranquilidad.",
+      mensaje: "Podrias hablarme del seguro de vida!"
     },
     {
       id: 2,
@@ -16,6 +18,7 @@ export const Sticky = () => {
       title: "Seguro de Auto",
       description:
         "Conduce con confianza con nuestro seguro vehicular. Cobertura amplia, asistencia 24/7 y proceso de reclamación rápido.",
+      mensaje: "Podrias hablarme del seguro de Auto!"
     },
     {
       id: 3,
@@ -23,6 +26,7 @@ export const Sticky = () => {
       title: "Seguro de Gastos Médicos",
       description:
         "Cuida tu salud sin preocuparte por los costos. Cobertura médica integral con la mejor red hospitalaria del país.",
+      mensaje: "Podrias hablarme de Gastos medicos!"
     },
   ]
 
@@ -62,9 +66,9 @@ export const Sticky = () => {
 
                 {/* Botón de acción (opcional) */}
                 <div className="mt-6 text-center">
-                  <button className="text-[#FF6600] font-semibold hover:text-[#e55a00] transition-colors duration-300 group-hover:underline">
+                  <Button mensaje={service.mensaje} soyPublico={true} styles={"text-[#FF6600] font-semibold hover:text-[#e55a00] transition-colors duration-300 group-hover:underline"}>
                     Conocer más →
-                  </button>
+                  </Button>
                 </div>
               </div>
             )
@@ -74,9 +78,9 @@ export const Sticky = () => {
         {/* Call to action adicional */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">¿Necesitas asesoría personalizada para elegir el mejor seguro?</p>
-          <button className="bg-[#FF6600] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a00] transition-colors duration-300 shadow-md hover:shadow-lg">
+          <Button mensaje={""} soyPublico={true} styles="bg-[#FF6600] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a00] transition-colors duration-300 shadow-md hover:shadow-lg">
             Contactar Asesor
-          </button>
+          </Button>
         </div>
       </div>
     </section>
