@@ -1,8 +1,8 @@
 export default function manifest() {
   return {
-    name: 'Next.js App',
-    short_name: 'Next.js App',
-    description: 'Next.js App',
+    name: 'Vitta',
+    short_name: 'Vitta',
+    description: 'Seguro de vida, contrata y resuelve problemas con aseguradoras',
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',
