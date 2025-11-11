@@ -55,7 +55,7 @@ export const Menu = ({ isOpen }) => {
       defaults: { ease: "power2.inOut", duration: .8 }
     })
       .to(container.current, {
-        height: "100lvh",
+        height: "100svh",
         pointerEvents: "auto"
       }) 
       .to(".text-link", {
@@ -74,7 +74,7 @@ export const Menu = ({ isOpen }) => {
   return (
     <div
       ref={container}
-      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-brand/60 backdrop-blur-sm fixed z-30 top-0 left-0"
+      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-brand/72 backdrop-blur-sm fixed z-30 top-0 left-0"
     >
       <ul className="flex flex-col gap-y-8 text-5xl font-black uppercase">
         {["Work", "Showreel", "Services", "Contact"].map((item, index) => (
