@@ -7,11 +7,11 @@ export const Hero = () => {
 
 
   return (
-    <div className='w-full h-screen relative flex flex-col gap-y-16 justify-center items-center bg-bg'>
+    <div className='w-full overflow-hidden h-svh relative flex flex-col gap-y-16 justify-center items-center bg-bg'>
         
         {/* title */}
 
-        <div className='text-5xl relative md:text-6xl font-black md:font-normal md:mb-16 text-center flex flex-col gap-y-3 z-10 px-4 bg-bg'>
+        <div className='text-5xl relative md:text-6xl font-black md:font-normal md:mb-16 text-center flex flex-col gap-y-3 z-10 bg-bg'>
             <h3>DIGITAL</h3>
             <h3>STORYTELLING</h3>
             <h3>THAT ELEVATES</h3>
