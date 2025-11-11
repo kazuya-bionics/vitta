@@ -47,8 +47,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es-mx">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <GoogleAnalytics />
-        <Pixel />
         <Layout>{children}</Layout>
       </body>
     </html>

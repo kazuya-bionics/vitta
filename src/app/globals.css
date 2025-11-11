@@ -1,34 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #FF714B;
-  --color-accent: #4D2D8C;
-  --color-bg: #f2f2f2;
+  --color-brand: #26FF00;
+  --color-accent: #FF3F7F;
+  --color-bg: #E0C7F0;
   /* etc */
 }
 
 @font-face {
-  font-family: chillax;
-  src: url(../../public/assets/typography/chillax.ttf);
+  font-family: clash-display;
+  src: url("../../public/ClashDisplay-Variable.ttf");
 }
 
-canvas.spline-canvas {
-  mix-blend-mode: screen; /* o multiply, overlay, etc. */
-  position: relative;
-  z-index: 1;
-}
-
-
-* {
-  font-family: chillax;
-}
-
-div, p, span {
-  font-weight: 500;
-}
-
-h3, h1, span {
-  font-weight: 600;
+*{
+  font-family: clash-display;
 }
 
 html {

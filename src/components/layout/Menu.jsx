@@ -4,6 +4,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import Link from "next/link"
 import { useRef, useEffect } from "react"
+import { FaFacebook, FaInstagram, FaX, FaYoutube } from "react-icons/fa6"
 
 export const Menu = ({ isOpen }) => {
   const container = useRef(null)
@@ -73,10 +74,10 @@ export const Menu = ({ isOpen }) => {
   return (
     <div
       ref={container}
-      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-brand/80 backdrop-blur-sm fixed z-30 top-0 left-0"
+      className="w-full h-[0px] overflow-hidden flex flex-col justify-center px-8 bg-brand/60 backdrop-blur-sm fixed z-30 top-0 left-0"
     >
       <ul className="flex flex-col gap-y-8 text-5xl font-black uppercase">
-        {["Casos", "Nosotros", "Servicios", "Contacto"].map((item, index) => (
+        {["Work", "Showreel", "Services", "Contact"].map((item, index) => (
           <li
             key={index}
             onMouseEnter={onHoverLink}
@@ -88,6 +89,16 @@ export const Menu = ({ isOpen }) => {
           </li>
         ))}
       </ul>
+      <div className="absolute left-0 bottom-0 h-20 w-full flex justify-between items-center px-8 font-semibold">
+        <div className="px-3 rounded-full bg-white py-1">
+          News
+        </div>
+        <div className="text-2xl flex gap-x-2">
+          <Link href="/" className="bg-white p-2 rounded-full"><FaFacebook/></Link>
+          <Link href="/" className="bg-white p-2 rounded-full"><FaInstagram/> </Link>
+          <Link href="/" className="bg-white p-2 rounded-full"><FaYoutube/></Link>
+        </div>
+      </div>
     </div>
   )
 }

@@ -3,48 +3,38 @@
 import Link from "next/link";
 import { FaAlignRight } from "react-icons/fa6";
 import { Menu } from "./Menu";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { PageTransition } from "./PageTransition";
+import { useState } from "react";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showTransition, setShowTransition] = useState(false);
-  const pathname = usePathname();
 
   // Cada vez que cambia la ruta, dispara la animación
-  useEffect(() => {
-    setShowTransition(true); // Animación de entrada
-    setIsOpen(false);        // Cierra menú si estaba abierto
-
-    // Desactiva animación después de 800ms (duración de la máscara)
-    const timeout = setTimeout(() => setShowTransition(false), 800);
-    return () => clearTimeout(timeout);
-  }, [pathname]);
-
   return (
     <>
       {/* PageTransition siempre envuelto en AnimatePresence */}
-      <PageTransition show={showTransition} />
 
-      <div className="w-full fixed h-16 flex justify-between items-center top-0 px-8 z-40">
-        <Link href="/" className="font-semibold text-lg">Vitta</Link>
+      <div className="w-full fixed h-20 flex justify-between items-center top-0 px-8 z-40 font-medium">
+        <Link href="/" className="font-bold text-lg">VITTA</Link>
 
-        <ul className="hidden bg-white rounded-[45] text-md drop-shadow-lg p-2 md:flex gap-x-4">
-          <Link href="/casos">Casos</Link>
-          <Link href="/nosotros">Nosotros</Link>
-          <Link href="/servicios">Servicios</Link>
+        <ul className="hidden bg-white rounded-[45] text-md drop-shadow-lg py-2 px-4 md:flex gap-x-1">
+          <Link href="/casos" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Work</Link>
+          <Link href="/nosotros" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Showreel</Link>
+          <Link href="/servicios" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Services</Link>
+          <Link href="/servicios" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Blog</Link>
         </ul>
 
         <div className="flex gap-x-2 justify-center items-center">
           <button
             onClick={() => setIsOpen(prev => !prev)}
-            className={`md:hidden rounded-full ${isOpen ? "bg-accent" : "bg-brand"} p-2 text-lg`}
+            className="text-xl md:hidden p-2 bg-white rounded-full"
           >
             <FaAlignRight />
           </button>
           <Link className="hidden md:flex" href="/#contacto">
-            Contacto
+            <button className="rounded-md px-3 py-1 m-1 overflow-hidden relative group cursor-pointer  font-medium">
+                <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                <span className="relative text-black transition duration-300 group-hover:text-white ease">Contact</span>
+            </button>
           </Link>
         </div>
       </div>

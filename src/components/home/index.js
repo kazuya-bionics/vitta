@@ -1,6 +1,0 @@
-export * from "./About"
-export * from "./Contact"
-export * from "./Button"
-export * from "./Hero"
-export * from "./Intersection_1"
-export * from "./Loader"
