@@ -1,8 +1,11 @@
 import React from 'react'
 
+import Image from 'next/image'
+import imgAbout from "../../public/images/imgAbout.jpg"
+
 export const About = () => {
   return (
-    <div className='w-full h-screen relative text-lg flex flex-col justify-center text-left font-medium'>
+    <div className='w-full h-screen relative text-lg flex flex-col justify-center text-left font-medium overflow-hidden'>
       
       
       {/* principal text */}
@@ -10,6 +13,12 @@ export const About = () => {
         <div className='flex justify-center items-center text-8xl gap-x-8'>
           <h3>WE</h3>
            {/* imagen */}
+           <Image
+            src={imgAbout}
+            width={200}
+            height={50}
+            alt='hello'
+           />
           <h3>ARE</h3>
         </div>
       </div>

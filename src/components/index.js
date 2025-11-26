@@ -1,2 +1,5 @@
 export * from  "./Hero"
 export * from  "./About"
+export * from  "./Contact"
+export * from  "./Showreel"
+export * from  "./Services"

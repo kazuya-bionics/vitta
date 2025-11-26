@@ -1,6 +1,9 @@
 import { 
   Hero,
-  About
+  About,
+  Services,
+  Showreel,
+  Contact
  } from "@/components"
 
 const page = () => {
@@ -8,6 +11,9 @@ const page = () => {
     <main>
       <Hero/>
       <About/>
+      <Services/>
+      <Showreel/>
+      <Contact/>
     </main>
   )
 }
