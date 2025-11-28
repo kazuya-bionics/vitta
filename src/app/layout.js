@@ -24,9 +24,9 @@ export const metadata = {
   },
   openGraph: {
     title: "Vitta Seguro",
-    description: "Protección confiable para servidores públicos y quienes aman",
+    description: "Studio especializado en desarrollo web moderno, aplicaciones inteligentes y soluciones basadas en inteligencia artificial. Creamos plataformas eficientes, seguras y escalables para empresas que buscan innovar.",
     url: "https://www.vittaseguro.com.mx",
-    siteName: "Vitta Seguro",
+    siteName: "Vitta Studio",
     locale: "es_MX",
     type: "website",
     images: [
@@ -34,7 +34,7 @@ export const metadata = {
         url: "https://www.vittaseguro.com.mx/assets/bgHeroSection.jpg",
         width: 1200,
         height: 630,
-        alt: "Vitta Seguro",
+        alt: "Vitta Studio",
       },
     ],
   },
