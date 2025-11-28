@@ -3,6 +3,8 @@
 import { FaArrowDown } from 'react-icons/fa6'
 import { motion } from "motion/react"
 
+import Link from 'next/link'
+
 export const Hero = () => {
 
 
@@ -60,7 +62,9 @@ export const Hero = () => {
 
         <div className='absolute font-medium text-[9px] md:text-[10px] max-w-32 md:max-w-56 text-left bottom-8 left-8 gap-y-4 hidden md:flex md:flex-col'>
             <p>WE DON'T FOLLOW TRENDS, WE CREATE THEM. WE DESIGN WEBSITES THAT CAPTURE GLANCES AND TURN EVERY CLICK INTO AN UNFORGETTABLE EXPERIENCE.</p>
-            <button className='bg-brand py-1 w-28'>SEE OUR PROJECTS</button>
+            <Link href="#services">
+              <button className='bg-brand py-1 w-28'>SEE OUR PROJECTS</button>
+            </Link>
         </div>
 
         <div className='absolute font-medium text-[10px] bottom-8 md:translate-0 md:right-8 right-1/2 translate-x-1/2 flex flex-col gap-y-4'>

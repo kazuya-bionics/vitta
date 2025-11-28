@@ -67,13 +67,13 @@ export const Contact = () => {
           </div>
 
           <div className="absolute md:right-0 right-8 bottom-8 border-t-2 border-r-2 border-l-2 p-2 gap-x-4 flex md:text-3xl text-xl">
-            <Link href="#">
+            <Link href="https://www.instagram.com/vitta.studios">
               <FaInstagram/>
             </Link>
-            <Link href="#">
+            <Link href="https://www.facebook.com/vitta.studios">
               <FaFacebook/>
             </Link>
-            <Link href="#">
+            <Link href="https://x.com/leon_kazuya">
               <FaTwitter/>
             </Link>
           </div>
