@@ -12,6 +12,10 @@
   src: url("../../public/ClashDisplay-Variable.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   font-family: clash-display;
 }

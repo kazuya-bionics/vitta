@@ -4,16 +4,16 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import Link from "next/link"
 import { useRef, useEffect } from "react"
-import { FaFacebook, FaInstagram, FaX, FaYoutube } from "react-icons/fa6"
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6"
 
-export const Menu = ({ isOpen }) => {
+export const Menu = ({ isOpen, onClose }) => {
   const container = useRef(null)
   const tl = useRef(null)
 
   gsap.registerPlugin(useGSAP)
   const { contextSafe } = useGSAP()
 
-  // Efecto hover por item
+  // HOVER ANIMATION
   const onHoverLink = contextSafe((event) => {
     const links = event.currentTarget.querySelectorAll(".text-link")
     gsap.to(links, {
@@ -36,15 +36,14 @@ export const Menu = ({ isOpen }) => {
     })
   })
 
-  // Crear la animación una sola vez
+  // MENU ANIMATION
   useGSAP(() => {
 
-    gsap.set(".text-link",{
-      opacity:0,
+    gsap.set(".text-link", {
+      opacity: 0,
       yPercent: 100
     })
 
-    // Comienza cerrado (oculto)
     gsap.set(container.current, {
       height: 0,
       pointerEvents: "none"
@@ -54,22 +53,28 @@ export const Menu = ({ isOpen }) => {
       paused: true,
       defaults: { ease: "power2.inOut", duration: .8 }
     })
-      .to(container.current, {
-        height: "100svh",
-        pointerEvents: "auto"
-      }) 
-      .to(".text-link", {
-        opacity: 1,
-        yPercent: 0,
-        stagger: .06
-      }, ".3")
+    .to(container.current, {
+      height: "100svh",
+      pointerEvents: "auto"
+    })
+    .to(".text-link", {
+      opacity: 1,
+      yPercent: 0,
+      stagger: .06
+    }, ".3")
 
   }, [container])
 
-  // Reproduce o revierte cuando cambia `isOpen`
   useEffect(() => {
     isOpen ? tl.current.play() : tl.current.reverse()
   }, [isOpen])
+
+const handleClick = () => {
+  if (isOpen) {
+    tl.current.reverse();   // ⬅️ Ejecuta animación reverse
+  }      // ⬅️ Cambia el estado para que funcione
+};
+
 
   return (
     <div
@@ -84,19 +89,34 @@ export const Menu = ({ isOpen }) => {
             onMouseLeave={onUnhoverLink}
             className="open-menu-link py-1 overflow-hidden h-14 relative flex flex-col"
           >
-            <Link className="text-link" href={item.toLowerCase() === 'contacto' ? '/#contacto' : `/${item.toLowerCase()}`}>{item}</Link>
-            <Link className="text-link" href={item.toLowerCase() === 'contacto' ? '/#contacto' : `/${item.toLowerCase()}`}>{item}</Link>
+            <Link
+              className="text-link"
+              href={`/#${item.toLowerCase()}`}
+              onClick={handleClick}
+            >
+              {item.toLowerCase()}
+            </Link>
+
+            <Link
+              className="text-link"
+              href={`/#${item.toLowerCase()}`}
+              onClick={handleClick}
+            >
+              {item.toLowerCase()}
+            </Link>
           </li>
         ))}
       </ul>
+
       <div className="absolute left-0 bottom-0 h-20 w-full flex justify-between items-center px-8 font-semibold">
         <div className="px-3 rounded-full bg-white py-1">
           News
         </div>
+
         <div className="text-2xl flex gap-x-2">
-          <Link href="/" className="bg-white p-2 rounded-full"><FaFacebook/></Link>
-          <Link href="/" className="bg-white p-2 rounded-full"><FaInstagram/> </Link>
-          <Link href="/" className="bg-white p-2 rounded-full"><FaYoutube/></Link>
+          <Link href="/" className="bg-white p-2 rounded-full" onClick={onClose}><FaFacebook /></Link>
+          <Link href="/" className="bg-white p-2 rounded-full" onClick={onClose}><FaInstagram /></Link>
+          <Link href="/" className="bg-white p-2 rounded-full" onClick={onClose}><FaYoutube /></Link>
         </div>
       </div>
     </div>

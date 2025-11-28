@@ -7,7 +7,7 @@ export const Hero = () => {
 
 
   return (
-    <div className='w-full overflow-hidden h-svh relative flex flex-col gap-y-16 justify-center items-center bg-bg'>
+    <div className='w-full overflow-hidden h-svh relative flex flex-col gap-y-16 justify-center items-center bg-bg z-10'>
         
         {/* title */}
 

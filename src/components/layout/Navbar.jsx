@@ -17,10 +17,10 @@ export const Navbar = () => {
         <Link href="/" className="font-bold text-lg">VITTA</Link>
 
         <ul className="hidden bg-white rounded-[45] text-md drop-shadow-lg py-2 px-4 md:flex gap-x-1">
-          <Link href="/casos" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Work</Link>
-          <Link href="/nosotros" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Showreel</Link>
-          <Link href="/servicios" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Services</Link>
-          <Link href="/servicios" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Blog</Link>
+          <Link href="/#work" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Work</Link>
+          <Link href="/#showreel" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Showreel</Link>
+          <Link href="/#services" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Services</Link>
+          <Link href="https://www.facebook.com/vitta.studios" className="hover:bg-black hover:text-white py-1 px-3 rounded-full transition duration-300">Blog</Link>
         </ul>
 
         <div className="flex gap-x-2 justify-center items-center">
