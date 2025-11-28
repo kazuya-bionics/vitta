@@ -15,6 +15,7 @@ export const About = () => {
            {/* imagen */}
            <Image
             src={imgAbout}
+            loading="eager"
             className='w-20 md:w-40 hidden md:flex'
             alt='hello'
            />

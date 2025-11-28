@@ -30,6 +30,7 @@ export const Showreel = () => {
         <Image
           src={imgShowreel}
           alt="hola"
+          loading="eager"
           className="w-full h-screen absolute top-20 md:top-8 left-0 -z-10 object-cover "
         />
 
