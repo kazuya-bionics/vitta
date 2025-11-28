@@ -83,6 +83,7 @@ export const Contact = () => {
           <Image 
             src={imgContact}
             className="w-[95%] h-[90%]"
+            loading="eager"
             alt=""
           />
         </div>
