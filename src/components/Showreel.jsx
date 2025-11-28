@@ -1,8 +1,7 @@
 import Image from "next/image"
 
-import imgAbout from "../../public/images/imgAbout.jpg"
+import imgShowreel from "../../public/images/imgShowreel.jpg"
 import { FaPlayCircle } from "react-icons/fa"
-import { FaPlay } from "react-icons/fa6"
 
 export const Showreel = () => {
   return (
@@ -17,7 +16,7 @@ export const Showreel = () => {
       {/* content */}
 
       <div className='w-full h-full flex flex-col relative justify-center items-center'>
-        <div className='w-full absolute top-20 h-full bg-black/75'></div>
+        <div className='w-full absolute top-20 h-screen bg-black/75'></div>
 
         <div className="flex flex-col justify-center items-center z-10 text-white font-bold text-center text-3xl md:text-6xl">
           <h3>ARE YOU NOT FULLY</h3>
@@ -29,9 +28,9 @@ export const Showreel = () => {
         </div>
 
         <Image
-          src={imgAbout}
+          src={imgShowreel}
           alt="hola"
-          className="w-full h-full absolute top-0 left-0 -z-10 object-cover "
+          className="w-full h-screen absolute top-20 md:top-8 left-0 -z-10 object-cover "
         />
 
       </div>

@@ -9,6 +9,10 @@ import Link from "next/link"
 import Image from 'next/image'
 
 import imgAbout from "../../public/images/imgAbout.jpg"
+import imgLandingPage from "../../public/images/imgLandingPage.jpg"
+import imgWebApps from "../../public/images/ImgWebApps.jpg"
+import imgAutomation from "../../public/images/imgAutomation.jpg"
+
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 
 export const Services = () => {
@@ -20,20 +24,20 @@ export const Services = () => {
              Our landing pages include refined animations and micro-interactions that enhance engagement 
              with smooth, responsive motion—creating interfaces that look polished, feel intuitive, 
              and convert effectively.`,
-      image: imgAbout
+      image: imgLandingPage
     },
     {
       title: "Web Applications",
       text: `We design advanced web applications with scalable architecture, polished UI, seamless user 
              experience, and fast performance. Every interface is built to maximize clarity, precision, 
              and business impact.`,
-      image: imgAbout
+      image: imgWebApps
     },
     {
       title: "AI Automation",
       text: `Our AI implementations automate workflows, generate insights, and reduce manual workload. 
              We create intelligent systems that integrate smoothly into your existing processes.`,
-      image: imgAbout
+      image: imgAutomation
     }
   ]
 

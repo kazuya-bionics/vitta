@@ -13,7 +13,7 @@ export const Hero = () => {
         
         {/* title */}
 
-        <div className='text-5xl relative md:text-6xl md:px-4 font-black md:font-normal md:mb-16 text-center flex flex-col gap-y-3 z-10 bg-bg'>
+        <div className='text-4xl relative md:text-6xl md:px-4 font-black md:font-normal md:mb-16 text-center flex flex-col gap-y-3 z-10 bg-bg'>
             <h3>DIGITAL</h3>
             <h3>STORYTELLING</h3>
             <h3>THAT ELEVATES</h3>

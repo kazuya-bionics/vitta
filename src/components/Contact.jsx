@@ -5,7 +5,7 @@ import Link from "next/link"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6"
 
 import Image from "next/image"
-import aboutImage from "../../public/images/imgAbout.jpg"
+import imgContact from "../../public/images/imgContact.jpg"
 
 export const Contact = () => {
   return (
@@ -57,13 +57,13 @@ export const Contact = () => {
         <div className="md:w-2/5 md:h-2/5 md:absolute right-8 bottom-0 md:text-2xl text-xl font-medium flex flex-col justify-evenly">
 
           <div className="w-full border-b-2">
-            <Link href="#">TALK WITH US</Link>
+            <Link href="https://wa.me/5215621375416">TALK WITH US</Link>
           </div>
           <div className="w-full border-b-2">
-            <Link href="#">ABOUT</Link>
+            <Link href="#work">ABOUT</Link>
           </div>
           <div className="w-full">
-            <Link href="#">BLOG</Link>
+            <Link href="https://www.facebook.com/vitta.studioss">BLOG</Link>
           </div>
 
           <div className="absolute md:right-0 right-8 bottom-8 border-t-2 border-r-2 border-l-2 p-2 gap-x-4 flex md:text-3xl text-xl">
@@ -81,7 +81,7 @@ export const Contact = () => {
 
         <div className="md:absolute right-8 top-8 md:w-1/2 md:h-1/2 w-[75vw] h-[30vh] py-2 md:py-0 flex justify-center items-center bg-bg">
           <Image 
-            src={aboutImage}
+            src={imgContact}
             className="w-[95%] h-[90%]"
             alt=""
           />
