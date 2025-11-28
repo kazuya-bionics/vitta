@@ -86,7 +86,7 @@ export const Services = () => {
             key={slides[index].title}
             src={slides[index].image}
             alt="slide"
-            className='w-[90%] h-[90%] rounded-[15px]'
+            className='w-[90%] h-[300px] md:h-[90%] rounded-[15px]'
           />
         </div>
 
