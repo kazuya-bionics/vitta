@@ -31,7 +31,7 @@ export const Footer = () => {
 
         {/* vitta tittle and terms */}
         <div className='flex flex-col'>
-            <h3 className='border-b-2 text-5xl md:text-[168px] leading-48 md:text-center font-medium'>WE ARE VITTA</h3>
+            <h3 className='border-b-2 text-4xl md:text-[168px] leading-48 md:text-center font-medium'>WE ARE VITTA</h3>
             <div className='w-full mt-8 flex justify-between items-center'>
                 <div>
                     2025 All rights reserved
