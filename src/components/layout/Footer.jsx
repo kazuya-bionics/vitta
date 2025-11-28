@@ -8,8 +8,8 @@ export const Footer = () => {
             {/* left cont */}
             <div className='flex flex-col gap-y-4'>
                 <h3 className='text-5xl'> Talk <span className='font-semibold'>with us</span></h3>
-                <form className='flex gap-x-2'>
-                    <input type="email" placeholder='Your Email' className=' bg-black/60 text-white focus:bg-black/80 px-4 py-1 rounded-[45px]' />
+                <form className='flex w-full gap-x-2'>
+                    <input type="email" placeholder='Your Email' className=' bg-black/60 text-white w-40 focus:bg-black/80 px-4 py-1 rounded-[45px]' />
                     <button type="submit" className='bg-black/60 px-4 py-1 text-white rounded-[45px]'>Contact</button>
                 </form>
             </div>
