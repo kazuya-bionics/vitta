@@ -30,7 +30,7 @@ export const Navbar = () => {
           >
             <FaAlignRight />
           </button>
-          <Link className="hidden md:flex" href="/#contacto">
+          <Link className="hidden md:flex" href="/#contact">
             <button className="rounded-md px-3 py-1 m-1 overflow-hidden relative group cursor-pointer  font-medium">
                 <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                 <span className="relative text-black transition duration-300 group-hover:text-white ease">Contact</span>

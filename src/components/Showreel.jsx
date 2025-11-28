@@ -6,7 +6,7 @@ import { FaPlay } from "react-icons/fa6"
 
 export const Showreel = () => {
   return (
-    <div className='w-full h-screen relative overflow-hidden z-10'>
+    <div id="showreel" className='w-full h-screen relative overflow-hidden z-10'>
       
       {/* top carrousel */}
 

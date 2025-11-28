@@ -8,7 +8,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 
 export const Services = () => {
   return (
-    <div className='w-full md:h-screen py-8 md:py-0 bg-brand flex justify-center items-center z-10'>
+    <div id="services" className='w-full md:h-screen py-8 md:py-0 bg-brand flex justify-center items-center z-10'>
         <div className='bg-[#f2f2f2] w-[90%] h-[90%] py-4 md:p flex flex-col md:flex-row-reverse rounded-[15px]'>
 
             {/* image container */}

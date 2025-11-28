@@ -5,7 +5,7 @@ import imgAbout from "../../public/images/imgAbout.jpg"
 
 export const About = () => {
   return (
-    <div className='w-full bg-white h-screen relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 font-medium overflow-hidden z-10'>
+    <div id='work' className='w-full bg-white h-screen relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 font-medium overflow-hidden z-10'>
       
       
       {/* principal text */}

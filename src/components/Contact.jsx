@@ -9,7 +9,7 @@ import aboutImage from "../../public/images/imgAbout.jpg"
 
 export const Contact = () => {
   return (
-    <div className='w-full md:h-screen p-4 md:p-0 z-10 bg-brand flex justify-center items-center'>
+    <div id="contact" className='w-full md:h-screen p-4 md:p-0 z-10 bg-white flex justify-center items-center'>
       <div className='w-[95vw] h-[93vh] border-2 relative p-8 z-10 flex flex-col-reverse justify-center gap-y-4 items-center'>
         
         {/* logo + text */}
@@ -25,7 +25,7 @@ export const Contact = () => {
               repeat:Infinity
             }
           }}
-          className='bg-white rounded-full'>
+          className='bg-brand rounded-full'>
           
           <svg viewBox="0 0 200 200" className="md:w-40 md:h-40 w-12 h-12 p-2">
             <defs>
@@ -79,7 +79,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <div className="md:absolute right-8 top-8 md:w-1/2 md:h-1/2 w-[75vw] h-[30vh] py-2 md:py-0 flex justify-center items-center bg-white">
+        <div className="md:absolute right-8 top-8 md:w-1/2 md:h-1/2 w-[75vw] h-[30vh] py-2 md:py-0 flex justify-center items-center bg-bg">
           <Image 
             src={aboutImage}
             className="w-[95%] h-[90%]"
