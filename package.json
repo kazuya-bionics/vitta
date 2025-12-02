@@ -23,6 +23,7 @@
     "motion": "^12.23.18",
     "next": "15.3.4",
     "next-pwa": "^5.6.0",
+    "next-transition-router": "^0.2.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-facebook-pixel": "^1.0.4",
