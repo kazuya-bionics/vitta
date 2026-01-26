@@ -5,7 +5,7 @@ import imgAbout from "../../public/images/imgAbout.jpg"
 
 export const About = () => {
   return (
-    <div id='work' className='w-full bg-white h-screen relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 font-medium overflow-hidden z-10'>
+    <div id='work' className='w-full bg-white md:h-screen py-40 md:py-0 relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 font-medium overflow-hidden z-10'>
       
       
       {/* principal text */}
@@ -24,12 +24,12 @@ export const About = () => {
       </div>
 
       {/* right text */}
-      <div className='md:absolute flex flex-col md:left-auto md:translate-x-0 md:right-8 md:bottom-8 bottom-28 max-w-68 text-[10px] gap-y-4 text-center md:text-left justify-center items-center md:items-start'>
+      <div className='md:absolute flex flex-col md:left-auto md:translate-x-0 md:right-8 md:bottom-8 bottom-28 max-w-68 gap-y-4 md:text-[10px] text-center md:text-left justify-center items-center md:items-start'>
         <h3>We are a creative web studio specialized in building visually striking, high-performance websites that elevate brands through design, storytelling, and motion.
 
-Our focus is simple: transform ideas into digital experiences that feel alive. Every site we build blends clean layout design, refined animations, and thoughtful interactions that capture attention and guide users naturally.</h3>
+          Our focus is simple: transform ideas into digital experiences that feel alive. Every site we build blends clean layout design, refined animations, and thoughtful interactions that capture attention and guide users naturally.</h3>
         <h3>From modern landing pages to fully custom platforms, we combine aesthetics and functionality to deliver websites that not only look exceptional—but also engage, convert, and leave a lasting impression.</h3>
-        <button className='bg-brand mt-3 md:mt-0 py-1 w-28'>SEE OUR PROJECTS</button>
+        <button className='bg-brand mt-3 md:mt-0 py-1 w-28 text-sm'>SEE OUR PROJECTS</button>
       </div>
  
       {/* left Text */}

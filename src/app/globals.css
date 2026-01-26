@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: clash-display;
-  src: url("../../public/ClashDisplay-Variable.ttf");
+  font-family: satoshi;
+  src: url("../../public/Satoshi-Variable.ttf");
 }
 
 html {
@@ -17,9 +17,47 @@ html {
 }
 
 *{
-  font-family: clash-display;
+  font-family: satoshi;
 }
 
-html {
-  scroll-behavior: smooth;
+.orb {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+
+  background: radial-gradient(circle at 30% 30%, #b6ff5c, #39ff14 60%, #19c90f);
+
+  box-shadow:
+    0 0 15px rgba(57, 255, 20, 0.6),
+    0 0 15px rgba(57, 255, 20, 0.4);
+
+  position: relative;
+}
+
+.orb::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(57, 255, 20, 0.45),
+    rgba(57, 255, 20, 0.12) 40%,
+    transparent 70%
+  );
+  filter: blur(10px);
+}
+
+/* 🔄 Animación lenta */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
 }
