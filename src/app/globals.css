@@ -61,3 +61,31 @@ html {
 .animate-spin-slow {
   animation: spinSlow 20s linear infinite;
 }
+
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroller {
+  display: inline-flex;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 84px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
