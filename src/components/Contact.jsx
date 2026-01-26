@@ -38,7 +38,7 @@ export const Contact = () => {
               " />
             </defs>
 
-            <text className="md:text-3xl text-4xl uppercase tracking-widest font-semibold">
+            <text className="text-4xl uppercase tracking-widest font-semibold">
               <textPath href="#circlePath" textLength="470">
                 VITTA VITTA VITTA
               </textPath>
@@ -54,7 +54,7 @@ export const Contact = () => {
         </div>
 
         {/* right text */}
-        <div className="md:w-2/5 md:h-2/5 md:absolute right-8 bottom-0 md:text-2xl text-xl font-medium flex flex-col justify-evenly">
+        <div className="md:w-2/5 md:h-2/5 md:absolute right-8 bottom-0 md:text-3xl text-2xl font-medium flex flex-col justify-evenly">
 
           <div className="w-full border-b-2">
             <Link href="https://wa.me/5215621375416">TALK WITH US</Link>

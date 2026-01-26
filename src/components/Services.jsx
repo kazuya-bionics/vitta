@@ -19,24 +19,18 @@ export const Services = () => {
 
   const slides = [
     {
-      title: "Landing pages",
-      text: `We craft high-quality software optimized for speed, security, and seamless performance. 
-             Our landing pages include refined animations and micro-interactions that enhance engagement 
-             with smooth, responsive motion—creating interfaces that look polished, feel intuitive, 
-             and convert effectively.`,
+      title: "Landing page",
+      text: `Creamos software de alta calidad, optimizado para velocidad, seguridad y un rendimiento impecable. Nuestras landing pages incluyen animaciones refinadas y microinteracciones que mejoran el engagement con un movimiento suave y responsivo, creando interfaces que lucen pulidas, se sienten intuitivas y convierten de manera efectiva.`,
       image: imgLandingPage
     },
     {
-      title: "Web Applications",
-      text: `We design advanced web applications with scalable architecture, polished UI, seamless user 
-             experience, and fast performance. Every interface is built to maximize clarity, precision, 
-             and business impact.`,
+      title: "Aplicaciones web",
+      text: `Diseñamos aplicaciones web avanzadas con arquitectura escalable, interfaz pulida, experiencia de usuario fluida y alto rendimiento. Cada interfaz está construida para maximizar la claridad, la precisión y el impacto en el negocio.`,
       image: imgWebApps
     },
     {
-      title: "AI Automation",
-      text: `Our AI implementations automate workflows, generate insights, and reduce manual workload. 
-             We create intelligent systems that integrate smoothly into your existing processes.`,
+      title: "Automatizacion",
+      text: `Implementamos IA y sistemas inteligentes directamente en tus aplicaciones, automatizando procesos, optimizando flujos de trabajo y generando insights accionables. Nuestras soluciones se integran de forma fluida y escalable, potenciando tus sistemas existentes y reduciendo la carga manual mientras aumentan la eficiencia y la precisión.`,
       image: imgAutomation
     }
   ]
@@ -78,7 +72,7 @@ export const Services = () => {
 
   return (
     <div id="services" className='w-full md:h-screen py-8 md:py-0 flex justify-center items-center z-10'>
-      <div className=' w-[90%] h-[90%] py-4 md:p flex flex-col md:flex-row-reverse rounded-[15px]'>
+      <div className=' w-[90%] h-[90%] py-4 md:p flex flex-col md:flex-row-reverse rounded-[15px] bg-brand'>
 
         {/* IMAGE */}
         <div className='md:w-1/2 md:h-full relative flex justify-center items-center'>
@@ -110,14 +104,14 @@ export const Services = () => {
             {shouldShowMore && (
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="text-sm underline text-brand"
+                className="text-sm underline "
               >
                 {expanded ? "Read less" : "Read more"}
               </button>
             )}
 
             <Link href="https://wa.me/5215621375416">
-              <button className='bg-brand py-1 w-28 text-sm md:text-base'>See more</button>
+              <button className='bg-white py-1 w-28 text-sm md:text-base'>Contactanos</button>
             </Link>
           </div>
 

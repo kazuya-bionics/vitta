@@ -1,11 +1,12 @@
 import React from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import imgAbout from "../../public/images/imgAbout.jpg"
 
 export const About = () => {
   return (
-    <div id='work' className='w-full bg-white md:h-screen py-40 md:py-0 relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 font-medium overflow-hidden z-10'>
+    <div id='work' className='w-full bg-white md:h-screen py-40 md:py-0 relative text-lg flex flex-col md:justify-center md:text-left justify-center items-center gap-y-8 overflow-hidden z-10'>
       
       
       {/* principal text */}
@@ -25,11 +26,9 @@ export const About = () => {
 
       {/* right text */}
       <div className='md:absolute flex flex-col md:left-auto md:translate-x-0 md:right-8 md:bottom-8 bottom-28 max-w-68 gap-y-4 md:text-[10px] text-center md:text-left justify-center items-center md:items-start'>
-        <h3>We are a creative web studio specialized in building visually striking, high-performance websites that elevate brands through design, storytelling, and motion.
-
-          Our focus is simple: transform ideas into digital experiences that feel alive. Every site we build blends clean layout design, refined animations, and thoughtful interactions that capture attention and guide users naturally.</h3>
-        <h3>From modern landing pages to fully custom platforms, we combine aesthetics and functionality to deliver websites that not only look exceptional—but also engage, convert, and leave a lasting impression.</h3>
-        <button className='bg-brand mt-3 md:mt-0 py-1 w-28 text-sm'>SEE OUR PROJECTS</button>
+        <h3>Somos un estudio creativo especializado en construir sitios web visualmente impactantes y de alto rendimiento que elevan las marcas mediante diseño, narrativa y motion. Nuestro enfoque es simple: transformar ideas en experiencias digitales que se sientan vivas. Cada sitio que creamos combina un diseño limpio, animaciones refinadas e interacciones cuidadosamente pensadas que captan la atención y guían a los usuarios de manera natural.</h3>
+        <h3>Desde landing pages modernas hasta plataformas completamente personalizadas, combinamos estética y funcionalidad para ofrecer sitios web que no solo lucen excepcionales, sino que también captan la atención, convierten visitantes y dejan una impresión duradera.</h3>
+        <Link href="#showreel" className='bg-brand mt-3 md:mt-0 py-1 w-28 text-sm'>SEE OUR PROJECTS</Link>
       </div>
  
       {/* left Text */}
@@ -39,7 +38,7 @@ export const About = () => {
       </div>
 
       {/* lateral text */}
-      <h3 className=' absolute left-[-10px] top-1/2 translate-y-[-50%] rotate-[-90deg] text-[14px]'> our services </h3>
+      <Link href="#services" className='absolute left-[-10px] top-1/2 translate-y-[-50%] rotate-[-90deg] text-[14px] drop-shadow-xl drop-shadow-brand' > our services </Link>
 
     </div>
   )
