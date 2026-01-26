@@ -22,7 +22,7 @@
     "leva": "^0.10.0",
     "lucide-react": "^0.536.0",
     "motion": "^12.23.18",
-    "next": "15.3.4",
+    "next": "15.3.8",
     "next-pwa": "^5.6.0",
     "next-transition-router": "^0.2.11",
     "react": "^19.0.0",
