@@ -21,14 +21,14 @@ export const Hero = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-22 left-[50%] translate-x-[-50%] md:translate-x-0 md:left-16 md:top-[50%] md:translate-y-[-50%] text-4xl md:text-7xl font-bold z-10">
+        className="absolute top-25 left-[50%] translate-x-[-50%] md:translate-x-0 md:left-16 md:top-[50%] md:translate-y-[-50%] text-4xl md:text-7xl font-bold z-10">
         <h3 className="text-white text-center">VITTA</h3>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="absolute right-[50%] top-30 translate-x-[50%] md:translate-x-0 md:right-16 md:top-[50%] md:translate-y-[-50%] text-4xl md:text-7xl font-bold z-10 ">
+        className="absolute right-[50%] top-32 translate-x-[50%] md:translate-x-0 md:right-16 md:top-[50%] md:translate-y-[-50%] text-4xl md:text-7xl font-bold z-10 ">
         <h3 className="text-white text-center">STUDIO</h3>
       </motion.div>
 
@@ -41,7 +41,7 @@ export const Hero = () => {
 
       
       {/* Bottom Info */}
-      <div className="w-full py-4 absolute bottom-8 md:bottom-2 left-0 flex justify-center md:justify-between px-16 items-center">
+      <div className="w-full py-4 absolute bottom-6 md:bottom-2 left-0 flex justify-center md:justify-between px-16 items-center">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
