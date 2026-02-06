@@ -19,7 +19,7 @@ export const About = () => {
             <li><div className="w-4 h-4 bg-purple-700 rounded-full mr-2 inline-block align-middle"></div>Soluciones centradas en el usuario</li>
             <li><div className="w-4 h-4 bg-yellow-400 rounded-full mr-2 inline-block align-middle"></div>Desarrollo ágil y eficiente</li>
         </ul>
-        <button className="bg-blue-700 text-white px-6 py-3 rounded-lg mt-8 hover:bg-blue-800 transition-colors">Ver proyectos</button>
+        <a className="bg-blue-700 text-white px-6 py-3 rounded-lg mt-8 hover:bg-blue-800 transition-colors" href="#showreel">Ver proyectos</a>
       </div>
       <div className='absolute w-75 h-75 top-0 right-1/2 translate-x-1/2 translate-y-[-25%] md:translate-y-0'>
         <Canvas>
