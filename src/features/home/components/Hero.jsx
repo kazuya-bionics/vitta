@@ -15,7 +15,7 @@ import { Environment } from "@react-three/drei"
 export const Hero = () => {
 
   return (
-    <motion.div className="size-full bg-radial sticky top-0 from-[#ACBFF7] to-[#0032CA] w-full h-screen overflow-hidden">
+    <motion.div className="size-full bg-radial from-[#ACBFF7] to-[#0032CA] w-full h-screen overflow-hidden">
       {/* Principal Text */}
       <motion.div 
         initial={{ opacity: 0, y: -50 }}

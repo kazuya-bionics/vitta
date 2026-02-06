@@ -5,7 +5,7 @@ import { AnimatedSphere } from './three/AnimatedSphere'
 
 export const About = () => {
   return (
-    <section id='nosotros' className="w-full h-screen sticky top-0 overflow-hidden">
+    <section id='nosotros' className="w-full h-screen overflow-hidden">
       
       <div className='w-full h-[10vh] md:h-[13vh] flex justify-start items-center bg-blue-800 px-8 md:px-16'>
       </div>
