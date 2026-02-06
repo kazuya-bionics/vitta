@@ -41,7 +41,7 @@ export const Hero = () => {
 
       
       {/* Bottom Info */}
-      <div className="w-full py-4 absolute bottom-10 md:bottom-2 left-0 flex justify-center md:justify-between px-16 items-center">
+      <div className="w-full py-4 absolute bottom-8 md:bottom-2 left-0 flex justify-center md:justify-between px-16 items-center">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
