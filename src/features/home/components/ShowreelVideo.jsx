@@ -2,7 +2,7 @@
 
 export const ShowreelVideo = ({ onClose }) => {
   return (
-    <div className="w-full h-screen fixed top-0 left-0 flex z-40 items-center justify-center bg-black/80 backdrop-blur-sm">
+    <div className="w-full h-screen fixed top-0 left-0 flex z-50 items-center justify-center bg-black/80 backdrop-blur-sm">
         <button onClick={onClose} className="absolute top-4 right-4 text-white text-sm bg-gray-800 px-3 py-1 rounded hover:bg-gray-700 transition-opacity opacity-80 hover:opacity-100">
           Close
         </button>
