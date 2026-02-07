@@ -41,7 +41,7 @@ export const Navbar = ({ toggleMenu }) => {
         {["Nosotros", "Servicios", "Precios", "Showreel"].map(
           (item) => (
             <li key={item}>
-              <a className="hover:text-blue-200 transition" href="/">
+              <a className="hover:text-blue-200 transition" href={`#${item.toLowerCase()}`}>
                 {item}
               </a>
             </li>
