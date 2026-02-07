@@ -49,7 +49,7 @@ export const Navbar = ({ toggleMenu }) => {
         )}
       </ul>
 
-      <a className="hover:text-blue-200 transition hidden md:flex" href="#">
+      <a className="hover:text-blue-200 transition hidden md:flex" href="#contacto">
         Dudas / Contacto
       </a>
 
