@@ -1,5 +1,4 @@
 import { ParallaxText } from "./ParallaxText"
-import logo from "../../../assets/images/logo.jpeg"
 import { FaPlayCircle } from "react-icons/fa"
 
 import { useState } from "react"
@@ -33,7 +32,7 @@ export const Showreel = () => {
       {/* Video */}
       <button onClick={handlePlayClick} className="flex items-center justify-center">
         <FaPlayCircle className="text-black/50 animate-pulse rounded-full backdrop-blur-md text-6xl z-20 cursor-pointer absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]" />
-        <img src={logo} alt="Vitta Logo" className="w-90 rounded-full max-w-full h-90 z-10" />
+        <img src="/logo.svg" alt="VITTA Logo" className="w-90 h-90" />
       </button>
       
       {showVideo && <ShowreelVideo onClose={handleCloseVideo} />}
