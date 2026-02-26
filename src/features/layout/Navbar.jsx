@@ -32,9 +32,9 @@ export const Navbar = ({ toggleMenu }) => {
         }
       `}
     >
-      <a className="rounded-2xl flex justify-center items-center hover:text-blue-200 transition" href="/">
+      <a className="rounded-2xl flex justify-center items-center hover:text-blue-200 transition font-bold" href="/">
         <img src="/logo_white.svg" alt="VITTA Logo" className="w-20 h-20" />
-        Studio
+        GROUP
       </a>
 
       <ul className="gap-x-8 hidden md:flex">

@@ -26,11 +26,11 @@ export const Showreel = () => {
     >
       {/* Marquee superior */}
       <div className="absolute top-0 left-0 w-full bg-blue-700 py-2">
-        <ParallaxText baseVelocity={80}>VITTA</ParallaxText>
+        <ParallaxText baseVelocity={80}>VALTEMIA</ParallaxText>
       </div>
 
       {/* Video */}
-      <button onClick={handlePlayClick} className="flex items-center justify-center">
+      <button onClick={handlePlayClick} className="flex items-center justify-center bg-white rounded-full p-2">
         <FaPlayCircle className="text-black/50 animate-pulse rounded-full backdrop-blur-md text-6xl z-20 cursor-pointer absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]" />
         <img src="/logo.svg" alt="VITTA Logo" className="w-90 h-90" />
       </button>
@@ -39,7 +39,7 @@ export const Showreel = () => {
 
       {/* Marquee inferior */}
       <div className="absolute bottom-0 left-0 w-full bg-blue-700 py-2">
-        <ParallaxText baseVelocity={-80}>VITTA</ParallaxText>
+        <ParallaxText baseVelocity={-80}>VALTEMIA</ParallaxText>
       </div>
     </section>
   )

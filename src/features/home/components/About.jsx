@@ -11,9 +11,9 @@ export const About = () => {
       </div>
 
       <div className='w-full h-[90vh] md:h-[87vh] bg-[#F2F5FF] flex flex-col justify-center md:items-start px-8 md:px-16 gap-y-4 md:gap-y-2 md:text-left'>
-        <h3 className='text-2xl md:text-3xl font-semibold text-blue-950'>Somos <span className="text-blue-700">VITTA</span> Studio</h3>
-        <p className="text-blue-900 mt-8">VITTA Studio es una agencia de diseño y desarrollo digital que se enfoca en crear soluciones innovadoras y personalizadas para empresas de todos los tamaños.</p>
-        <p className="text-blue-900">Diseñamos y desarrollamos experiencias digitales que conectan marcas con personas. Nos enfocamos en crear soluciones visuales, funcionales y tecnológicas que generen impacto real.</p>
+        <h3 className='text-2xl md:text-3xl font-semibold text-blue-900'>Somos <span className="text-blue-700">VALTEMIA</span></h3>
+        <p className="text-blue-900 mt-8"><span className='text-blue-900 font-bold'>Valtemia group</span> es una agencia de diseño y desarrollo digital que se enfoca en crear soluciones innovadoras y personalizadas para empresas de todos los tamaños.</p>
+        <p className="text-blue-900">Diseñamos y desarrollamos experiencias digitales que conectan marcas con personas. <b>Nos enfocamos en crear soluciones visuales, funcionales y tecnológicas</b> que generen impacto real.</p>
         <ul className='text-black w-full mt-8 flex flex-col gap-y-3 list-none'>
             <li><div className="w-4 h-4 bg-teal-400 rounded-full mr-2 inline-block align-middle"></div>Creatividad y diseño a la vanguardia</li>
             <li><div className="w-4 h-4 bg-purple-700 rounded-full mr-2 inline-block align-middle"></div>Soluciones centradas en el usuario</li>
